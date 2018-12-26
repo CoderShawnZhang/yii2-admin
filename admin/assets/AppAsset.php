@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\assets;
+namespace admin\assets;
 
 use yii\web\AssetBundle;
 
@@ -9,15 +9,14 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $sourcePath = '@admin/assets/static';
     public $css = [
-        'css/site.css',
+        'css/style.css',
     ];
     public $js = [
+        'js/test.js',
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'common\assets\CommonAsset',
     ];
 }

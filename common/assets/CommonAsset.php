@@ -1,0 +1,21 @@
+<?php
+/**
+ * 前后端公用资源
+ */
+
+namespace common\assets;
+
+use yii\web\AssetBundle;
+
+class CommonAsset extends AssetBundle
+{
+    public $sourcePath = '@common/Assets/static';
+    public $css = [];
+    public $js = [
+        'js/test.js',
+    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+    ];
+}
