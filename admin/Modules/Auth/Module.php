@@ -1,10 +1,10 @@
 <?php
 
-namespace admin\Modules\Test;
+namespace admin\Modules\Auth;
 
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'admin\Modules\Test\Controllers';
+    public $controllerNamespace = 'admin\Modules\Auth\Controllers';
     public function init()
     {
         parent::init();

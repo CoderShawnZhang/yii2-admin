@@ -13,7 +13,8 @@ $directoryAsset = AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-purple sidebar-mini fixeds" style="min-width: 1270px; overflow-x: auto;">
+
     <?php $this->beginBody() ?>
     <div class="wrapper">
 

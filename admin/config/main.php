@@ -7,23 +7,33 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-backend',
+    'id' => 'admin',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'admin\controllers',
-    'bootstrap' => ['log'],
-    'modules' => [
-        'Test' => [
-            'class' => 'admin\Modules\Test\Module'
+    'bootstrap' => ['log','admin'],
+    "modules" => [
+        "admin" => [
+            "class" => "mdm\admin\Module",
+        ],
+        'Auth' => [
+            'class' => 'admin\Modules\Auth\Module'
+        ],
+        'Index' => [
+            'class' => 'admin\Modules\Index\Module',
         ]
+    ],
+    "aliases" => [
+        "@mdm/admin" => "@vendor/mdmsoft/yii2-admin",
     ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
+            'identityClass' => 'admin\Modules\Auth\models\User',
+            'enableAutoLogin' => false,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+            'loginUrl' => '/Auth/login/login',
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
@@ -41,12 +51,25 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
+        "authManager" => [
+            "class" => 'yii\rbac\DbManager',
+        ],
     ],
     'params' => $params,
+    'defaultRoute' => 'base',
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            'Auth/login/login',
+            'Auth/login/logout',
+            'base/index',
+        ],
+    ],
 ];

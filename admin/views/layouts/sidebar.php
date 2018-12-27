@@ -1,3 +1,4 @@
+
 <aside class="main-sidebar">
     <section class="sidebar">
         <?php
@@ -15,7 +16,7 @@
         $items = mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);
 
         echo dmstr\widgets\Menu::widget([
-            'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
+            'options' => ['class' => 'sidebar-menu'],
             'items' => $items
         ]);
 

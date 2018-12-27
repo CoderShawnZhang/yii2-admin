@@ -1,5 +1,6 @@
 <?php
 return [
+    'language' => 'zh-CN',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -8,6 +9,10 @@ return [
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
+        ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'cache' => 'cache',
         ],
         /**
          * 数据库相关设置

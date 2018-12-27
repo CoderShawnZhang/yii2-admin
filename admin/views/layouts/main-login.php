@@ -6,6 +6,7 @@ use yii\helpers\Html;
 /* @var $content string */
 
 dmstr\web\AdminLteAsset::register($this);
+$this->title = '登录';
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
