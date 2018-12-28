@@ -1,0 +1,45 @@
+.content {
+    min-height: 250px;
+    padding: 0;
+    padding-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#searchBox {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 0px solid #d2d6de;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.boxList {
+    margin-bottom: 0;
+}
+.btn.btn-info {
+    background-color: #8f8cd6;
+    border-color: #8f8cd6;
+    min-width: 82px;
+}
+
+.btn.btn-default {
+    background-color: #fff;
+    border-color: #c7c7c7;
+}
+.btn.btn-w82 {
+    width: 82px;
+    height: 34px;
+}
+
+.content-header h1{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.content-header h1 span{
+    padding-right:10px;
+}

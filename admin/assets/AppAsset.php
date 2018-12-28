@@ -12,9 +12,11 @@ class AppAsset extends AssetBundle
     public $sourcePath = '@admin/assets/static';
     public $css = [
         'css/style.css',
+        'css/resetAdminLte.css',
     ];
     public $js = [
         'js/test.js',
+        'js/fixedHead.js',
     ];
     public $depends = [
         'common\assets\CommonAsset',
