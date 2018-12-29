@@ -47,11 +47,12 @@ $this->registerJs($this->render('js/_index_script.js'));
         <?php
         echo \yii\grid\GridView::widget([
             'dataProvider' => $dataProvider,
-            'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed'],
+            'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed table-index-list min-w1800'],
             'layout' => '{items}<div class="box-footer clearfix"><div class="pull-right">{pager}</div></div>',
             'filterModel' => $searchModel,
             'pager' => [
-                    'class' => 'yii\widgets\LinkPager'
+                    'class' => 'admin\Widgets\LinkPager',
+                    'template' => '<div class="box-footer clearfix pagination-box"><div class="pull-right"><div class="form-inline">{summary}{pageButtons}</div></div></div>',
             ],
             'columns'=>[
                 [
@@ -69,16 +70,11 @@ $this->registerJs($this->render('js/_index_script.js'));
                     ])
                 ],
                 [
-                  'attribute' => 'username',
-                  'header' => '账号',
+                  'attribute' => 'name',
+                  'header' => '名称',
                     'value' => function($model){
-                        return $model->username;
+                        return $model->name;
                     }
-                ],
-                [
-                    'attribute'=>'created_at',
-                    'value'=>function($model){return date("Y-m-d H:i:s",$model->created_at);},
-                    'label'=>'时间'
                 ],
             ]
         ]);

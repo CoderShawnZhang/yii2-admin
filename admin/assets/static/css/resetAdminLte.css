@@ -53,3 +53,18 @@
     background-color: #7b77cf;
     border-color: #7b77cf;
 }
+
+.grid-view .box-footer .summary {
+    display: inline-block;
+    border: 0;
+    padding: 12px 10px;
+    vertical-align: top;
+}
+ul.pagination {
+    margin: 0;
+    padding: 5px;
+}
+
+.box-footer{
+    padding: 0;
+}

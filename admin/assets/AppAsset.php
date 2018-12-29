@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/test.js',
+        'js/searchBox.js',
         'js/fixedHead.js',
     ];
     public $depends = [

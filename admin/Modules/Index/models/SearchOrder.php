@@ -8,20 +8,20 @@
 
 namespace admin\Modules\Index\models;
 
-use admin\Modules\Auth\models\User;
+use common\models\Test;
 use yii\data\ActiveDataProvider;
 
-class SearchOrder extends User
+class SearchOrder extends Test
 {
     public $query;
-    public $name;
+
 
     public function rules()
     {
         return array_merge(parent::rules(),
             [
                 [['id'],'integer'],
-                [['username'],'string']
+                [['name'],'string']
             ]);
     }
 
@@ -29,7 +29,7 @@ class SearchOrder extends User
     {
         return [
             'id'=>'1111',
-            'username'=>'1111'
+            'name'=>'1111'
         ];
     }
 
@@ -37,7 +37,7 @@ class SearchOrder extends User
     {
         $this->query = self::find()
             ->andFilterWhere(['id'=>$this->id])
-            ->andFilterWhere(['like','username',$this->username]);
+            ->andFilterWhere(['like','name',$this->name]);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $this->query,
@@ -45,7 +45,7 @@ class SearchOrder extends User
                'defaultOrder' => ['id' => SORT_DESC],
             ],
             'pagination' => [
-                'pageSize' => 1,
+                'pageSize' => 5,
             ],
         ]);
         $this->query->orderBy('id');
