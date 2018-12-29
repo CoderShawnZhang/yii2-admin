@@ -6,8 +6,7 @@
                 <img src="<?= $directoryAsset->baseUrl ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
-
+                <p><?=Yii::$app->user->identity->username;?></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -33,14 +32,11 @@
                 'items' => $menu['children']
             ];
         };
-
         $items = mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);
-
         echo dmstr\widgets\Menu::widget([
             'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
             'items' => $items
         ]);
-
         ?>
     </section>
 </aside>

@@ -45,7 +45,7 @@ class SearchOrder extends User
                'defaultOrder' => ['id' => SORT_DESC],
             ],
             'pagination' => [
-                'pageSize' => 50,
+                'pageSize' => 1,
             ],
         ]);
         $this->query->orderBy('id');

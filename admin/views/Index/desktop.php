@@ -50,6 +50,9 @@ $this->registerJs($this->render('js/_index_script.js'));
             'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed'],
             'layout' => '{items}<div class="box-footer clearfix"><div class="pull-right">{pager}</div></div>',
             'filterModel' => $searchModel,
+            'pager' => [
+                    'class' => 'yii\widgets\LinkPager'
+            ],
             'columns'=>[
                 [
                     'attribute' => 'id',

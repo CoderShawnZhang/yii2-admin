@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use admin\assets\AppAsset;
 $directoryAsset = AppAsset::register($this);
 ?>
-    <?php $this->beginPage() ?>
+<?php $this->beginPage() ?>
     <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>">
     <head>
@@ -13,31 +13,25 @@ $directoryAsset = AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-purple sidebar-mini fixeds">
-
+    <body class="hold-transition skin-purple sidebar-mini fixeds sidebar-collapse">
     <?php $this->beginBody() ?>
     <div class="wrapper">
-
         <?= $this->render(
             'header.php',
             ['directoryAsset' => $directoryAsset]
         ) ?>
-
         <?= $this->render(
             'left.php',
             ['directoryAsset' => $directoryAsset]
         )
         ?>
-
         <?= $this->render(
             'content.php',
             ['content' => $content, 'directoryAsset' => $directoryAsset]
         ) ?>
-
     </div>
-
     <?php $this->endBody() ?>
     </body>
     </html>
-    <?php $this->endPage() ?>
+<?php $this->endPage() ?>
 

@@ -4,7 +4,7 @@
     padding-top: 15px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 0;
+    padding-left: 10px;
     padding-right: 0;
 }
 
@@ -12,10 +12,11 @@
     position: relative;
     border-radius: 3px;
     background: #ffffff;
-    border-top: 0px solid #d2d6de;
+    border-top: 3px solid #d2d6de;
     margin-bottom: 10px;
     width: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    display: none;
 }
 .boxList {
     margin-bottom: 0;
@@ -42,4 +43,13 @@
 }
 .content-header h1 span{
     padding-right:10px;
+}
+.table{
+    margin-bottom: 0;
+}
+
+/**分页颜色*/
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #7b77cf;
+    border-color: #7b77cf;
 }
