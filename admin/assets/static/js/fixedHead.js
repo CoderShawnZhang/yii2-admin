@@ -233,6 +233,7 @@
     });
 })(jQuery);
 
+
 $(".table-index-list").FixedHead({
     bgColor: "#fff",
     bottomBox: ".box-footer.clearfix",

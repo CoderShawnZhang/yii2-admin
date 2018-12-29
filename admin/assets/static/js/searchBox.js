@@ -1,42 +1,42 @@
-
+var paramts={
+    searchBtnPosition: '.content-header h1',    //搜索开关按钮位置
+    btnGroup:' .btnGroupBox',                   //按钮组
+    boxTarget:'.box.box-default',                //事件标记
+    sessionKey:(location.href).split('?')[0],
+    openText:'打开搜索',
+    closeText:'收起搜索'
+}
 /**
  * 控制搜索面板
  * @param {Object} options
  */
-function searchBox(options) {
-    var enableList = ["orders", "store-orders", "orders-abnormal", "orders-finance"];
-    var currentUrl = (location.href).split('?')[0];
-    var newSearchType = enableList.indexOf(options.type) != -1;
+function searchSWitch(options) {
     var op = $.extend({
-        btn: '.content-header h1',      //事件按钮
-        btnGroup: ' .btnGroupBox',      //按钮组
-        box: '.box.box-default',         //事件盒子
-        show: sessionStorage.getItem(currentUrl) || (newSearchType ? "block" : 'none'), //是否显示搜索块
-        btnName: '', //按钮名称
-        type: '',
-        searchField: []
+        btn: paramts.searchBtnPosition,
+        btnGroup: paramts.btnGroup,
+        box: paramts.boxTarget,
+        show: sessionStorage.getItem(paramts.sessionKey),
+        openText: paramts.openText,
+        closeText: paramts.closeText
     }, options);
     // 判断是否是按按钮组
     if ($(op.btn + op.btnGroup).length == 0) {
-        $(op.btn).append('<button type="button" class="btn btn-info" id="openSearch">' + (op.show === 'none' ? '打开搜索' : '收起搜索') + '</button>');
+        $(op.btn).append('<button type="button" class="btn btn-info" id="openSearch">' + (op.show === 'none' ? op.openText : op.closeText) + '</button>');
     } else {
-        $(op.btn + op.btnGroup).prepend('<button type="button" class="btn sbtn-info" id="openSearch">' + (op.show === 'none' ? '打开搜索' : '收起搜索') + '</button>');
+        $(op.btn + op.btnGroup).prepend('<button type="button" class="btn sbtn-info" id="openSearch">' + (op.show === 'none' ? op.openText : op.closeText) + '</button>');
     };
     var $searchBox = $(op.box);
-
-    if (op.type == "") {
-        $searchBox.css('display', op.show);
-        $('#openSearch').on('click', function () {
-            if ($searchBox.is(':hidden')) {
-                $(this).text('收起搜索');
-                $searchBox.show();
-                sessionStorage.setItem(currentUrl, 'block');
-            }
-            else {
-                $(this).text('打开搜索');
-                $searchBox.hide();
-                sessionStorage.setItem(currentUrl, 'none');
-            }
-        });
-    }
+    $searchBox.css('display', op.show);
+    $('#openSearch').on('click', function () {
+        if ($searchBox.is(':hidden')) {
+            $(this).text(op.closeText);
+            $searchBox.show();
+            sessionStorage.setItem(op.sessionKey, 'block');
+        }
+        else {
+            $(this).text(op.openText);
+            $searchBox.hide();
+            sessionStorage.setItem(op.sessionKey, 'none');
+        }
+    });
 };

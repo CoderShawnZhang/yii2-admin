@@ -28,8 +28,8 @@ class SearchOrder extends Test
     public function attributeLabels()
     {
         return [
-            'id'=>'1111',
-            'name'=>'1111'
+            'id'=>'编号',
+            'name'=>'名称'
         ];
     }
 
@@ -45,7 +45,7 @@ class SearchOrder extends Test
                'defaultOrder' => ['id' => SORT_DESC],
             ],
             'pagination' => [
-                'pageSize' => 5,
+                'pageSize' => 50,
             ],
         ]);
         $this->query->orderBy('id');

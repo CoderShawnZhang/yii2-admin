@@ -68,3 +68,59 @@ ul.pagination {
 .box-footer{
     padding: 0;
 }
+/**文本框边框颜色*/
+.form-group.has-success .form-control,
+.form-group.has-success .input-group-addon {
+    border-color: #ddd;
+}
+.has-success .select2-container--open .select2-selection, .has-success .select2-container--krajee.select2-container--focus .select2-selection {
+     -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 0 6px #ddd;
+     box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 0 6px #ddd;
+     border-color: #ddd;
+}
+.has-success.select2-container--krajee .select2-dropdown, .has-success .select2-container--krajee .select2-selection {
+     border-color: #ddd;
+}
+.select2-dropdown select2-dropdown--below {width: 241px;}
+.select2-container--krajee .select2-dropdown {
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    border-color: #ddd;
+    overflow-x: hidden;
+    margin-top: -1px;
+}
+
+/**下拉框删除X垂直剧中*/
+.select2-container--krajee .select2-selection--multiple .select2-selection__clear{
+    line-height: 20px;
+}
+.select2-container--krajee .select2-selection--single .select2-selection__clear{
+    right: 3rem;
+    line-height: 20px;
+}
+/**多选item样式*/
+.select2-container--krajee .select2-selection--multiple .select2-selection__choice {
+    color: #f9f4f4;
+    background: #f5f5f5;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin: 5px 0 0 6px;
+    padding: 0 6px;
+    background: #5f5ca8;
+}
+/**多选item X样式*/
+.select2-container--krajee .select2-selection--multiple .select2-selection__choice__remove {
+    float: right;
+    color: #fdf9f9;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 1;
+    filter: alpha(opacity=40);
+    display: inline-block;
+    /* text-shadow: 0 1px 0 #fff; */
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 10px;
+    /* margin: 1px 0 0 3px; */
+    margin-left: 5px;
+}

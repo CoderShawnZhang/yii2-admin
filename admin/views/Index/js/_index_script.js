@@ -1,4 +1,4 @@
 $(function(){
-   searchBox({box:"#searchBox",type:"",searchField:["search-code"]});
+    searchSWitch({box:"#searchBox"});
 });
 

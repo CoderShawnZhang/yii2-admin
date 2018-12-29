@@ -16,6 +16,11 @@ class IndexController extends Controller
     }
     public function actionDesktop()
     {
+//        for($i=0;$i<1000;$i++){
+//            $t = new Test();
+//            $t->name = $i.'-'.time();
+//            $t->save();
+//        }
 
         $searchModel = new SearchOrder();
         $searchModel->load(\Yii::$app->request->get());
