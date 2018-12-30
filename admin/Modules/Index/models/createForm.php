@@ -6,7 +6,7 @@
  * Time: 下午3:31
  */
 
-namespace admin\Modules\Test\models;
+namespace admin\Modules\Index\models;
 
 use yii\base\Model;
 

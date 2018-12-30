@@ -23,7 +23,7 @@ function searchSWitch(options) {
     if ($(op.btn + op.btnGroup).length == 0) {
         $(op.btn).append('<button type="button" class="btn btn-info" id="openSearch">' + (op.show === 'none' ? op.openText : op.closeText) + '</button>');
     } else {
-        $(op.btn + op.btnGroup).prepend('<button type="button" class="btn sbtn-info" id="openSearch">' + (op.show === 'none' ? op.openText : op.closeText) + '</button>');
+        $(op.btn + op.btnGroup).prepend('<button type="button" class="btn btn-info" id="openSearch">' + (op.show === 'none' ? op.openText : op.closeText) + '</button>');
     };
     var $searchBox = $(op.box);
     $searchBox.css('display', op.show);

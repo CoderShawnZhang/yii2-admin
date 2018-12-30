@@ -39,14 +39,14 @@ use kartik\select2\Select2;
                 <div class="col-md-2">
                     <div class="form-group field-ordersn has-success">
                         <?php
-                        echo $form->field($searchModel, 'id')->widget(Select2::classname(), [
-                            'data' => [2,3,4,5],
+                        echo $form->field($searchModel1, 'name')->widget(Select2::classname(), [
+                            'data' => $searchModel1->name,
                             'options' => [
                                 'multiple' => false,
                                 'placeholder' => '这个恶意',
                             ],
                             'pluginOptions' => [
-                                'allowClear' => true,
+                                'allowClear' => false,
                             ],
                         ])->label(false)
                         ?>
