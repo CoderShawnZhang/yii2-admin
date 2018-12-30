@@ -15,13 +15,17 @@ class SearchOrder extends Test
 {
     public $query;
 
+    public $date_range;
+    public $datetime_start;
+    public $datetime_end;
+    public $kvdate1;
 
     public function rules()
     {
         return array_merge(parent::rules(),
             [
                 [['id'],'integer'],
-                [['name'],'string']
+                [['name','date_range'],'string']
             ]);
     }
 
@@ -29,7 +33,8 @@ class SearchOrder extends Test
     {
         return [
             'id'=>'编号',
-            'name'=>'名称'
+            'name'=>'名称',
+            'date_range'=>'时间'
         ];
     }
 

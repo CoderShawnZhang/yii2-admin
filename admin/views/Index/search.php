@@ -1,7 +1,8 @@
 <?php
-use kartik\widgets\ActiveForm;
+use admin\Widgets\SearchActiveForm as ActiveForm;
 use \yii\helpers\Url;
 use kartik\select2\Select2;
+use kartik\daterange\DateRangePicker;
 ?>
 <div class="box search-box" id="searchBox">
     <!-- 搜索表单开始 -->
@@ -10,6 +11,7 @@ use kartik\select2\Select2;
         $form = ActiveForm::begin([
            'id' => 'orderSearch',
            'method' => 'get',
+           'searchModel' => $searchModel,
            'action' => Url::toRoute(['index'])
         ]);
         ?>
@@ -40,7 +42,7 @@ use kartik\select2\Select2;
                     <div class="form-group field-ordersn has-success">
                         <?php
                         echo $form->field($searchModel1, 'name')->widget(Select2::classname(), [
-                            'data' => $searchModel1->name,
+                            'data' => [1,2,3,4,5,6,7,8],
                             'options' => [
                                 'multiple' => false,
                                 'placeholder' => '这个恶意',
@@ -52,6 +54,8 @@ use kartik\select2\Select2;
                         ?>
                     </div>
                 </div>
+
+                <?= $form->fieldDateRage('date_range');?>
             </div>
             <div class="row">
                 <div class="col-md-2">

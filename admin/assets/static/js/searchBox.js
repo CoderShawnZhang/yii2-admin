@@ -2,7 +2,6 @@ var paramts={
     searchBtnPosition: '.content-header h1',    //搜索开关按钮位置
     btnGroup:' .btnGroupBox',                   //按钮组
     boxTarget:'.box.box-default',                //事件标记
-    sessionKey:(location.href).split('?')[0],
     openText:'打开搜索',
     closeText:'收起搜索'
 }
@@ -11,11 +10,12 @@ var paramts={
  * @param {Object} options
  */
 function searchSWitch(options) {
+    var currentUrl = (location.href).split('?')[0];
     var op = $.extend({
         btn: paramts.searchBtnPosition,
         btnGroup: paramts.btnGroup,
         box: paramts.boxTarget,
-        show: sessionStorage.getItem(paramts.sessionKey),
+        show: sessionStorage.getItem(currentUrl),
         openText: paramts.openText,
         closeText: paramts.closeText
     }, options);
@@ -30,13 +30,26 @@ function searchSWitch(options) {
     $('#openSearch').on('click', function () {
         if ($searchBox.is(':hidden')) {
             $(this).text(op.closeText);
-            $searchBox.show();
-            sessionStorage.setItem(op.sessionKey, 'block');
+            $searchBox.show(200);
+            sessionStorage.setItem(currentUrl, 'block');
         }
         else {
             $(this).text(op.openText);
-            $searchBox.hide();
-            sessionStorage.setItem(op.sessionKey, 'none');
+            $searchBox.hide(200);
+            sessionStorage.setItem(currentUrl, 'none');
         }
     });
 };
+
+
+$(".form-date .form-control").change(function(){
+    controlCloseBtn(this);
+});
+$(".search-control-clear").click(function(){
+   $(this).parents(".form-date").find(".form-control").val('');
+   $(".search-control-clear").hide();
+});
+function controlCloseBtn(dom)
+{
+    dom.value == "" ? $(dom).parent(".form-date").find(".search-control-clear").hide() : $(dom).parent(".form-date").find(".search-control-clear").show();
+}

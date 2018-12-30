@@ -89,7 +89,9 @@ ul.pagination {
     overflow-x: hidden;
     margin-top: -1px;
 }
-
+.select2-selection .select2-selection--multiple,.select2-selection .select2-selection--single{
+    border-radius: 0;
+}
 /**下拉框删除X垂直剧中*/
 .select2-container--krajee .select2-selection--multiple .select2-selection__clear{
     line-height: 20px;
@@ -123,4 +125,87 @@ ul.pagination {
     line-height: 10px;
     /* margin: 1px 0 0 3px; */
     margin-left: 5px;
+}
+
+/**日期文本框*/
+.form-date .input-group-addon {
+    position: absolute;
+    width: 31px;
+    border-color: transparent;
+    border-right: 1px solid #ddd;
+    background-color: transparent;
+    z-index: 5;
+    padding: 8px 8px;
+}
+.form-date .form-control {
+    padding-left: 35px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #fff;
+    opacity: 1;
+}
+.form-date .search-control-clear {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    top: 11px;
+    right: 22px;
+    z-index: 99;
+    line-height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+.daterangepicker{
+    width: 500px;
+}
+/**select 多选-全选颜色*/
+.s2-togall-button {
+    color: #5f5ca8;
+}
+/**日期选择确定按钮*/
+.range_inputs .applyBtn.btn-success {
+    background-color: #7b77cf;
+    border-color: #7b77cf;
+    outline: none;
+}
+.range_inputs .applyBtn {
+    margin-left: 155px;
+}
+.range_inputs .applyBtn, .range_inputs .cancelBtn {
+    margin-top: 2px;
+    padding: 3px 7px;
+    border-radius: 2px;
+}
+.daterangepicker .ranges{
+    text-align: right;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #7b77cf;
+    border-color: #7b77cf;
+    color: #fff;
+}
+.daterangepicker td.in-range {
+    background: #ecebff;
+    border-radius: 0;
+}
+.daterangepicker.dropdown-menu td.end-date, .daterangepicker td.end-date:hover {
+    background-color: #7b77cf;
+    border-color: #7b77cf;
+    color: #fff;
+}
+.range_inputs .applyBtn {
+    margin-left: 155px;
+}
+.range_inputs .applyBtn, .range_inputs .cancelBtn {
+    margin-top: 2px;
+    padding: 3px 7px;
+    border-radius: 2px;
 }
