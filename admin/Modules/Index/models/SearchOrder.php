@@ -18,14 +18,15 @@ class SearchOrder extends Test
     public $date_range;
     public $datetime_start;
     public $datetime_end;
-    public $kvdate1;
+    public $cateId;
+    public $cateId1;
 
     public function rules()
     {
         return array_merge(parent::rules(),
             [
                 [['id'],'integer'],
-                [['name','date_range'],'string']
+                [['name','date_range','cateId','cateId1'],'string']
             ]);
     }
 
@@ -34,7 +35,9 @@ class SearchOrder extends Test
         return [
             'id'=>'编号',
             'name'=>'名称',
-            'date_range'=>'时间'
+            'date_range'=>'时间',
+            'cateId'=>'分类',
+            'cateId1'=>'分类1'
         ];
     }
 
@@ -55,5 +58,10 @@ class SearchOrder extends Test
         ]);
         $this->query->orderBy('id');
         return $dataProvider;
+    }
+
+    public static function getCate()
+    {
+        return [1,2,3,4,5,6,7,8,9];
     }
 }

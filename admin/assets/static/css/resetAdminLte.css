@@ -111,6 +111,31 @@ ul.pagination {
     padding: 0 6px;
     background: #5f5ca8;
 }
+.select2-container--krajee .select2-dropdown {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    border-color: #66afe9;
+    overflow-x: hidden;
+    margin-top: -1px;
+}
+/*选择框滚动条*/
+.select2-results__options::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+/* 滚动槽 */
+.select2-results__options::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+/* 滚动条滑块 */
+.select2-results__options::-webkit-scrollbar-thumb {
+    height: 100px;
+    border-radius: 10px;
+    background: #e0e0e0;
+}
+.select2-results__options::-webkit-scrollbar-thumb:window-inactive {
+    background: #e0e0e0;
+}
 /**多选item X样式*/
 .select2-container--krajee .select2-selection--multiple .select2-selection__choice__remove {
     float: right;
@@ -196,10 +221,19 @@ ul.pagination {
     background: #ecebff;
     border-radius: 0;
 }
+.daterangepicker.dropdown-menu td.end-date{
+    border-radius: 0 4px 4px 0;
+}
 .daterangepicker.dropdown-menu td.end-date, .daterangepicker td.end-date:hover {
     background-color: #7b77cf;
     border-color: #7b77cf;
     color: #fff;
+}
+.daterangepicker td.start-date.end-date{
+    border-radius: 4px;
+}
+.daterangepicker .input-mini.active {
+    border: 1px solid #7a76cf;
 }
 .range_inputs .applyBtn {
     margin-left: 155px;

@@ -8,70 +8,31 @@
 
 namespace admin\Widgets;
 
-use kartik\daterange\DateRangePicker;
+use kartik\widgets\ActiveForm;
+use admin\Modules\Index\models\SearchOrder;
 
-class SearchActiveForm extends \kartik\form\ActiveForm
+
+class SearchActiveForm extends  ActiveForm
 {
-    public $searchModel;
+    use SearchActiveFormTrait;
 
     /**
-     * @param $attribute
-     * @param array $option
-     * @return mixed|string
+     * 商品分类选择框
+     * @param string $attribute model字段
+     * @return \yii\widgets\ActiveField
      */
-    public function fieldDateRage($attribute, $options = [])
+    public function fieldCate($attribute = 'cateId')
     {
-        $prefixHtml = <<< HTML
-        <div class="search-group form-date">
-                    <div class="input-group-addon">
-                        <i class="glyphicon glyphicon-time"></i>
-                    </div>
-HTML;
-        $style = !empty($this->searchModel->$attribute) ? 'style="display:inline;"' : '';
-        $suffixHtml = <<< HTML
-        <span class="search-control-clear" {$style}>×</span>
-                </div>
-HTML;
-        $options = array_merge([
-            'model' => $this->searchModel,
-            'attribute' => $attribute,
-            'convertFormat' => true,
-            'options' => [
-                'placeholder' => $this->searchModel->getAttributeLabel($attribute),
-                'readonly' => true,
-                'class' => 'form-control select-warp-option  search-hight search-input-data-range-picker',
-            ],
-            'pluginOptions' => [
-                'timePicker' => false,
-                'locale' => [
-                    'format' => 'Y/m/d',
-                    'separator' => ' - ',
-                ],
-            ],
-        ], $options);
-
-        try {
-            return $this->outPut($prefixHtml . DateRangePicker::widget($options) . $suffixHtml);
-        } catch (\Exception $e) {
-            return '';
-        }
+        return $this->fieldSelect2($attribute, SearchOrder::getCate(),true);
     }
 
     /**
-     * 输出
-     * @param $output
-     * @return mixed
+     * 商品分类选择框
+     * @param string $attribute model字段
+     * @return \yii\widgets\ActiveField
      */
-    public function outPut($output)
+    public function fieldCate1($attribute = 'cateId1')
     {
-        $prefixHtml = <<< HTML
-       <div class="col-md-2">
-            <div class="form-group">
-HTML;
-        $suffixHtml = <<< HTML
-       </div>
-        </div>
-HTML;
-        return $prefixHtml . $output . $suffixHtml;
+        return $this->fieldSelect2($attribute, SearchOrder::getCate());
     }
 }

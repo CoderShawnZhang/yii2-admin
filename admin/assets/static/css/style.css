@@ -2,3 +2,12 @@
     line-height: 2;
 }
 
+
+/**RBAC btn*/
+.btn-success {
+    background-color: #5f5ca8;
+    border-color: #5f5ca8;
+}
+a {
+    color: #5f5ca8;
+}
