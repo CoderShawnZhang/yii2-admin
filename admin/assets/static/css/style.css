@@ -11,3 +11,76 @@
 a {
     color: #5f5ca8;
 }
+
+/**loading*/
+.modal.search-modal {
+    background: rgba(0, 0, 0, 0);
+}
+.admin-loading {
+    position: absolute;
+    min-width: 100px;
+    min-height: 60px;
+    padding: 19px 20px;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+}
+
+.admin-loading-text {
+    cursor: default;
+    margin: 0 3px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+.admin-loading-text admin {
+    display: inline-block;
+    height: 1em;
+    line-height: 1;
+    vertical-align: -0.25em;
+    text-align: left;
+    overflow: hidden;
+    font-family: Consolas, Monaco, monospace;
+}
+.admin-loading-text admin::before {
+    display: block;
+    content: '...\A..\A.';
+    white-space: pre-wrap;
+    -webkit-animation: admin 3s infinite step-start both;
+    animation: alw 3s infinite step-start both;
+}
+
+.admin-loading-pic {
+    display: inline-block;
+    width: 80px;
+    height: 67px;
+    margin-bottom: 10px;
+    background: url('../img/loading.png') 0 0 no-repeat;
+    -webkit-animation: Beefly 250ms steps(2) infinite;
+    animation: Beefly 250ms steps(2) infinite;
+    background-size: 80px 134px;
+}
+@-webkit-keyframes Beefly {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -134px;
+    }
+}
+@keyframes Beefly {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -134px;
+    }
+}
+
+.admin-loading-pic-animate {
+    background-position: 0 -67px;
+}

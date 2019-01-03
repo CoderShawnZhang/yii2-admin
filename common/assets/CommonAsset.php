@@ -13,6 +13,7 @@ class CommonAsset extends AssetBundle
     public $css = [];
     public $js = [
         'js/test.js',
+        'js/CommonJs.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

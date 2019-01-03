@@ -1,5 +1,13 @@
 <?php
-    $this->registerJs($this->render('js/_index_script.js'));
+    $opts = \yii\helpers\Json::htmlEncode([
+        'defaultTab' => 0,
+    ]);
+$js = <<<JS
+var _opt = {$opts};
+JS;
+$this->registerJs($js);
+$this->registerJs($this->render('js/test.js'));
+$this->registerJs($this->render('js/_index_script.js'));
 ?>
 <!--Header-->
 <?php $this->beginBlock('content-header'); ?>
@@ -17,5 +25,18 @@
 <?php $this->endBlock(); ?>
 <!--Search-->
 <?php echo $this->render('search',['searchModel'=>$searchModel,'searchModel1'=>$searchModel1]); ?>
-<!--List-->
-<?php echo $this->render('list',['searchModel'=>$searchModel,'dataProvider'=>$dataProvider]); ?>
+<div class="box box-solid no-mb">
+    <ul class="nav nav-tabs" id="navTabs">
+        <?php foreach ($count as $key => $val): ?>
+            <li>
+                <a href="/Index/index/list" data-target="#<?= $key ?>">aaaa</a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <div class="tab-content">
+        <?php foreach ($stateList as $key => $val): ?>
+            <div class="tab-pane" id="<?= $key ?>"></div>
+        <?php endforeach; ?>
+    </div>
+    <!-- /.tab-content -->
+</div>
