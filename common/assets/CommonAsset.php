@@ -14,6 +14,7 @@ class CommonAsset extends AssetBundle
     public $js = [
         'js/test.js',
         'js/CommonJs.js',
+        'js/modal-tip.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

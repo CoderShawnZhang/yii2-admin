@@ -57,7 +57,7 @@
             .fail(opts.error)
             .always(opts.complete)
     }
-    
+
     $.GET=function(url,callback){
         return $.AJAX({
             url:url,

@@ -84,3 +84,80 @@ a {
 .admin-loading-pic-animate {
     background-position: 0 -67px;
 }
+
+/*提示弹框统一样式*/
+.modal .modal-content {
+    border-radius: 6px;
+}
+.modal.order-modal {
+    background: rgba(0, 0, 0, 0.2);
+}
+.modal-tips {
+    position: absolute;
+    width: 600px;
+    min-height: 260px;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    margin-top: -130px;
+    margin-left: -300px;
+}
+.modal-tips .modal-content {
+    min-height: 260px;
+    border-radius: 6px;
+}
+.modal-tips .modal-header {
+    border-bottom: 0;
+    padding: 20px 20px;
+}
+.modal-tips .modal-header .close {
+    font-family: initial;
+    font-size: 28px;
+    opacity: 0.8;
+    margin-top: 0;
+    margin-right: 0;
+    line-height: 18px;
+}
+.modal-tips .modal-header .close span {
+    display: inline-block;
+    line-height: 18px;
+}
+.modal-tips .modal-header h4 {
+    margin: 0 0;
+    font-weight: bold;
+    line-height: 18px;
+}
+.modal-tips .modal-body {
+    font-family: "Microsoft YaHei";
+    text-align: center;
+    min-height: 148px;
+    padding: 20px;
+}
+.modal-tips .modal-body .fa-check-circle {
+    font-size: 50px;
+    color: #8f8cd6;
+}
+.modal-tips .modal-body .glyphicon-remove-circle {
+    font-size: 50px;
+    color: #dd4b39;
+}
+.modal-tips .modal-body .modal-info {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+.modal-tips .modal-body .modal-text {
+    color: #b5b5c3;
+}
+.modal-tips .modal-body textarea {
+    height: 110px;
+    border-radius: 6px;
+}
+.modal-tips .modal-footer {
+    height: 54px;
+    padding: 10px 20px;
+    font-family: "Microsoft YaHei";
+    border-top-color: #ddd;
+}

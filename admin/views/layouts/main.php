@@ -30,6 +30,7 @@ $directoryAsset = AppAsset::register($this);
             ['content' => $content, 'directoryAsset' => $directoryAsset]
         ) ?>
     </div>
+    <?= $this->render('modal-tips.php') ?>
     <?php $this->endBody() ?>
     </body>
     </html>

@@ -23,6 +23,7 @@ function getListHtml(url,selector) {
             adjustHeight: "1",
             minHeight: "200"
         });
+        Modal.alert('加载完毕。。。','success','是的发送房价是否吧是否啊死我人',false);
     });
 }
 $('#navTabs a:eq(' + _opt.defaultTab + ')').triggerHandler('click');
