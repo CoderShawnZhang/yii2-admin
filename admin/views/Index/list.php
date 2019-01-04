@@ -8,12 +8,19 @@ use kartik\select2\Select2;
             'dataProvider' => $dataProvider,
             'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed table-index-list min-w1800'],
             'layout' => '{items}<div class="box-footer clearfix"><div class="pull-right">{pager}</div></div>',
-            'filterModel' => $searchModel,
             'pager' => [
                 'class' => 'admin\Widgets\LinkPager',
                 'template' => '<div class="box-footer clearfix pagination-box"><div class="pull-right"><div class="form-inline">{summary}{pageButtons}</div></div></div>',
             ],
             'columns'=>[
+                [
+                    'class' => 'yii\grid\CheckboxColumn',
+                    'headerOptions' => ['width' => '30'],
+                    'name' => 'paymentId',
+                    'checkboxOptions' => function ($model, $key, $index, $column) {
+                        return ['value' => $model->id];
+                    },
+                ],
                 [
                     'attribute' => 'id',
                     'header'=>'用户编号',
@@ -33,6 +40,13 @@ use kartik\select2\Select2;
                     'header' => '名称',
                     'value' => function($model){
                         return $model->name;
+                    }
+                ],
+                [
+                    'attribute' => 'name',
+                    'header' => '加盟商',
+                    'value' => function(){
+                        return '广东惠州惠东县级店';
                     }
                 ],
             ]

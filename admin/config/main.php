@@ -31,8 +31,7 @@ return [
         ],
         'user' => [
             'identityClass' => 'admin\Modules\Auth\models\User',
-            'enableAutoLogin' => false,
-            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+            'enableAutoLogin' => true,
             'loginUrl' => '/Auth/login/login',
         ],
         'session' => [

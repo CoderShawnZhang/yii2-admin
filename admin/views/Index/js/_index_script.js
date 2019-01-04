@@ -16,6 +16,11 @@ $('#navTabs').on('show.bs.tab',function(e){
 function getListHtml(url,selector) {
     $.GET(url,function(res){
         $(selector).html(res);
+        $('.pagination a').on('click',function(e){
+            e.preventDefault();
+            var url = $(this).attr('href');
+            getListHtml(url,$(this).parents('.tab-pane'));
+        });
         $(".table.table-fixed").FixedHead({
             bgColor: "#fff",
             parentBox: ".tab-pane.active ",
@@ -23,7 +28,7 @@ function getListHtml(url,selector) {
             adjustHeight: "1",
             minHeight: "200"
         });
-        Modal.alert('加载完毕。。。','success','是的发送房价是否吧是否啊死我人',false);
+        // Modal.alert('加载完毕。。。','success','是的发送房价是否吧是否啊死我人',false);
     });
 }
 $('#navTabs a:eq(' + _opt.defaultTab + ')').triggerHandler('click');

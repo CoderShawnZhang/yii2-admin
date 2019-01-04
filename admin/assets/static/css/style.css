@@ -1,7 +1,20 @@
+
+body,
+h1,
+h2,
+h3,
+h4 {
+    font-family: "microsoft yahei" !important;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+}
+table,#navTabs{
+    font-size: 12px !important;
+}
 .select2-container--krajee .select2-selection--single{
     line-height: 2;
 }
-
 
 /**RBAC btn*/
 .btn-success {

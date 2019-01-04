@@ -29,7 +29,7 @@ $this->registerJs($this->render('js/_index_script.js'));
     <ul class="nav nav-tabs" id="navTabs">
         <?php foreach ($count as $key => $val): ?>
             <li>
-                <a href="/Index/index/list" data-target="#<?= $key ?>">aaaa</a>
+                <a href="/Index/index/list" data-target="#<?= $key ?>">待确认收款(412352)</a>
             </li>
         <?php endforeach; ?>
     </ul>
