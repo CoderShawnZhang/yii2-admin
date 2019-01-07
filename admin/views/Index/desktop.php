@@ -1,8 +1,10 @@
 <?php
-    $opts = \yii\helpers\Json::htmlEncode([
-        'defaultTab' => 0,
-    ]);
-    $asset = \admin\assets\AppAsset::register($this);
+use \yii\helpers\Url;
+use \yii\helpers\ArrayHelper;
+$opts = \yii\helpers\Json::htmlEncode([
+   'defaultTab' => 0,
+]);
+$asset = \admin\assets\AppAsset::register($this);
 $js = <<<JS
 var _opt = {$opts};
 JS;
@@ -30,7 +32,7 @@ $this->registerJs($this->render('js/_index_script.js'));
     <ul class="nav nav-tabs" id="navTabs">
         <?php foreach ($count as $key => $val): ?>
             <li>
-                <a href="/Index/index/list?tabId=<?=$key?>" data-target="#tab_<?= $key ?>">待确认收款(412352)</a>
+                <a href="<?= Url::toRoute(ArrayHelper::merge(['list', 'tabId' => $key],Yii::$app->request->get()))?>" data-target="#tab_<?= $key ?>">待确认收款(<?=$key?>)</a>
             </li>
         <?php endforeach; ?>
     </ul>
@@ -39,5 +41,4 @@ $this->registerJs($this->render('js/_index_script.js'));
             <div class="tab-pane" id="tab_<?= $key ?>"></div>
         <?php endforeach; ?>
     </div>
-    <!-- /.tab-content -->
 </div>

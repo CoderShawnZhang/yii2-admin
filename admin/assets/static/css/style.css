@@ -199,7 +199,7 @@ a {
     border-bottom-color: transparent;
 }
 .nav.nav-tabs {
-    border-bottom: 1px solid #8f8cd6;
+    border-bottom: 1px solid #5f5ca8;
     padding-left: 15px;
 }
 .nav.nav-tabs > li > a {
@@ -215,4 +215,26 @@ a {
 }
 .box-header .nav.nav-tabs > li > a:hover {
     background: #fff;
+}
+.panel-primary{
+    border-color: #fff;
+}
+
+/**GridView 子集展开*/
+.waitOrder-Icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/wait-plusIcon.png) 0 0 no-repeat;
+    cursor: pointer;
+}
+.waitOrder-openIcon {
+    background-position: 0 -21px;
+}
+/**GridView 子集展开高度*/
+.kv-expanded-row{
+    overflow-y: auto;
+    height: 200px;
+
+    border: 1px solid #7a76cf;
 }

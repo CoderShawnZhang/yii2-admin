@@ -1,8 +1,11 @@
 <?php
 namespace admin\views\Index\template;
 
+use kartik\grid\GridView;
 use kartik\select2\Select2;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\web\JsExpression;
 
 class listColumns
 {
@@ -15,6 +18,19 @@ class listColumns
                 'checkboxOptions' => function ($model, $key, $index, $column) {
                     return ['value' => $model->id];
                 },
+            ],
+            [
+                'class' => 'kartik\grid\ExpandRowColumn',
+                'width' => '30px',
+                'value' => function ($model, $key, $index, $column) {
+                    return GridView::ROW_COLLAPSED;
+                },
+                'detailUrl' => Url::to(['list-sub']),
+                'enableRowClick' => false,
+                'expandOneOnly' => true,
+                'allowBatchToggle' => false,
+                'expandIcon' => '<span class="waitOrder-Icon"></span>',
+                'collapseIcon' => '<span class="waitOrder-Icon waitOrder-openIcon"></span>'
             ],
             [
                 'attribute' => 'id',

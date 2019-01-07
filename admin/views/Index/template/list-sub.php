@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box" >
     <?php
     $columns = \admin\views\Index\template\listColumns::getColumns($searchModel);
     $item = [

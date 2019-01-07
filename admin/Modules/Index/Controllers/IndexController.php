@@ -38,4 +38,11 @@ class IndexController extends Controller
             'searchModel1'=>$searchModel1
         ]);
     }
+
+    public function actionListSub()
+    {
+        $searchModel = new SearchOrder();
+        $dataProvider = $searchModel->search();
+        return $this->renderAjax('template/list-sub',['searchModel'=>$searchModel,'dataProvider' => $dataProvider]);
+    }
 }
