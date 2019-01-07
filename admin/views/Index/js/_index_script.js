@@ -16,8 +16,8 @@ $('#navTabs').on('show.bs.tab',function(e){
 function getListHtml(url,selector) {
     $.GET(url,function(res){
         $(selector).html(res);
-        $('.pagination a').on('click',function(e){
-            e.preventDefault();
+        $('.pagination a').unbind('click').on('click',function(i){
+            i.preventDefault();
             var url = $(this).attr('href');
             getListHtml(url,$(this).parents('.tab-pane'));
         });

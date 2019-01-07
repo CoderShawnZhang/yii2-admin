@@ -43,7 +43,7 @@
             beforeSend:loadObj.show,
             complete:loadObj.hide,
             error:function(){
-                alert(111);
+                Modal.alert('>_<, 数据提交出现错误，请刷新后再试，如继续出现请提交技术部处理~','error','');
             },
             success:function(){}
         },opts);

@@ -174,3 +174,45 @@ a {
     font-family: "Microsoft YaHei";
     border-top-color: #ddd;
 }
+
+/**label 标签样式*/
+.label, .label.label-tag {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    padding: 0 4px;
+    border-radius: 9px;
+    display: inline-block;
+}
+.label-tag.label-bg-blue {/**蓝色*/
+    min-width: 48px;
+    line-height: 16px;
+    border: 1px solid #1e99f2;
+    color: #1e99f2;
+    background-color: #fff;
+}
+
+/**tab**/
+.nav.nav-tabs > li.active > a, .nav.nav-tabs > li.active > a:hover, .nav.nav-tabs > li.active > a:focus {
+    color: #8f8cd6;
+    border: 1px solid #8f8cd6;
+    border-bottom-color: transparent;
+}
+.nav.nav-tabs {
+    border-bottom: 1px solid #8f8cd6;
+    padding-left: 15px;
+}
+.nav.nav-tabs > li > a {
+    color: #333;
+}
+.nav.nav-tabs > li > a:hover,
+.nav.nav-tabs > li > a:focus {
+    border: 1px solid transparent;
+    border-color: transparent;
+    background-color: #fff;
+    color: #8f8cd6;
+    border-bottom: none;
+}
+.box-header .nav.nav-tabs > li > a:hover {
+    background: #fff;
+}

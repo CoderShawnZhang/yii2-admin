@@ -29,13 +29,13 @@ $this->registerJs($this->render('js/_index_script.js'));
     <ul class="nav nav-tabs" id="navTabs">
         <?php foreach ($count as $key => $val): ?>
             <li>
-                <a href="/Index/index/list" data-target="#<?= $key ?>">待确认收款(412352)</a>
+                <a href="/Index/index/list" data-target="#tab_<?= $key ?>">待确认收款(412352)</a>
             </li>
         <?php endforeach; ?>
     </ul>
     <div class="tab-content">
         <?php foreach ($stateList as $key => $val): ?>
-            <div class="tab-pane" id="<?= $key ?>"></div>
+            <div class="tab-pane" id="tab_<?= $key ?>"></div>
         <?php endforeach; ?>
     </div>
     <!-- /.tab-content -->
