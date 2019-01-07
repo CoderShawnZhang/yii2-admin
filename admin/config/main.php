@@ -20,6 +20,9 @@ return [
         ],
         'Index' => [
             'class' => 'admin\Modules\Index\Module',
+        ],
+        'gridview' => [
+            'class' => '\kartik\grid\Module',
         ]
     ],
     "aliases" => [

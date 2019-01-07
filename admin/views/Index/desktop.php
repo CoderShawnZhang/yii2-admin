@@ -2,6 +2,7 @@
     $opts = \yii\helpers\Json::htmlEncode([
         'defaultTab' => 0,
     ]);
+    $asset = \admin\assets\AppAsset::register($this);
 $js = <<<JS
 var _opt = {$opts};
 JS;
@@ -29,7 +30,7 @@ $this->registerJs($this->render('js/_index_script.js'));
     <ul class="nav nav-tabs" id="navTabs">
         <?php foreach ($count as $key => $val): ?>
             <li>
-                <a href="/Index/index/list" data-target="#tab_<?= $key ?>">待确认收款(412352)</a>
+                <a href="/Index/index/list?tabId=<?=$key?>" data-target="#tab_<?= $key ?>">待确认收款(412352)</a>
             </li>
         <?php endforeach; ?>
     </ul>

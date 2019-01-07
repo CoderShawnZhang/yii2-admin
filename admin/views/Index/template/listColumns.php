@@ -11,7 +11,7 @@ class listColumns
             [
                 'class' => 'yii\grid\CheckboxColumn',
                 'headerOptions' => ['width' => '30'],
-                'name' => 'paymentId',
+                'name' => 'id',
                 'checkboxOptions' => function ($model, $key, $index, $column) {
                     return ['value' => $model->id];
                 },

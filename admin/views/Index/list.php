@@ -3,6 +3,7 @@
         <?php
         $columns = \admin\views\Index\template\listColumns::getColumns($searchModel);
         $item = [
+            'id' => 'state'.Yii::$app->request->get('tabId',1),
             'dataProvider' => $dataProvider,
             'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed table-index-list min-w1800'],
             'layout' => '{items}<div class="box-footer clearfix"><div class="pull-right">{pager}</div></div>',
@@ -12,7 +13,7 @@
             ],
             'columns'=>$columns
         ];
-        echo \yii\grid\GridView::widget($item);
+        echo kartik\grid\GridView::widget($item);
         ?>
     </div>
 </div>
