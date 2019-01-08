@@ -5,7 +5,6 @@ use kartik\grid\GridView;
 use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\web\JsExpression;
 
 class listColumns
 {
@@ -68,6 +67,25 @@ class listColumns
                 'value' => function(){
                     return '广东惠州惠东县级店';
                 }
+            ],
+            [
+                'class' => 'kartik\grid\EditableColumn',
+                'attribute' => 'name',
+                'filter' => false,
+                'header' => '接单员备注',
+                'headerOptions' => ['class' => 'th-w200'],
+                'editableOptions' => [
+                    'size' => 'md',
+                    'inputType' => \kartik\editable\Editable::INPUT_TEXT,
+                    'formOptions' => ['action' => ['edit-name']],
+                    'placement' => \kartik\popover\PopoverX::ALIGN_BOTTOM_RIGHT,
+                    'showButtonLabels' => true,
+                    'submitButton' => [
+                        'icon' => '<i class="fa fa-save"></i>',
+                        'label' => '保存',
+                        'class' => 'btn btn-sm btn-primary',
+                    ],
+                ],
             ],
             [
                 'attribute' => 'name',

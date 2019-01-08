@@ -1,16 +1,14 @@
 <?php
 namespace admin\Modules\Index\Controllers;
 
+use admin\controllers\BaseController;
 use admin\Modules\Index\models\SearchOrder;
 use admin\Modules\Index\models\createForm;
-use yii\web\Controller;
+use yii\web\Response;
+use Yii;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
-    public function actonIndex()
-    {
-        var_dump(22222);die;
-    }
     public function actionDesktop()
     {
         $searchModel = new SearchOrder();
@@ -44,5 +42,15 @@ class IndexController extends Controller
         $searchModel = new SearchOrder();
         $dataProvider = $searchModel->search();
         return $this->renderAjax('template/list-sub',['searchModel'=>$searchModel,'dataProvider' => $dataProvider]);
+    }
+
+    public function actionEditName()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $data = Yii::$app->request->post();
+        $attribute = Yii::$app->request->post('editableAttribute', '');
+
+        var_dump($attribute);
+        return ['success'=>true,'result' => 1];
     }
 }

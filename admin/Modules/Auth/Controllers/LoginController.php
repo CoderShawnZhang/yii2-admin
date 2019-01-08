@@ -15,7 +15,7 @@ use Yii;
 class LoginController extends \yii\web\Controller
 {
     public $layout = '@admin/views/layouts/main-login';
-    private $loginInPath = '/Index/Index/desktop';
+    private $loginInPath = '/Index/index/desktop';
     private $logOutPath = '/Auth/login/login';
 
     public function actionLogin()
