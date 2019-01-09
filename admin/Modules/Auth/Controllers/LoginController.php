@@ -30,6 +30,7 @@ class LoginController extends \yii\web\Controller
             }else{
                 Yii::$app->session->setFlash('error', '账号被锁定, 请联系店长解锁账号.');
             }
+            return $this->refresh();
         }
         return $this->render('login', [
             'model' => $model,

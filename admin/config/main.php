@@ -21,6 +21,9 @@ return [
         'Index' => [
             'class' => 'admin\Modules\Index\Module',
         ],
+        'System' => [
+            'class' => 'admin\Modules\System\Module',
+        ],
         'gridview' => [
             'class' => '\kartik\grid\Module',
         ]

@@ -1,4 +1,7 @@
-<div class="box">
+<div class="box-header">
+
+</div>
+<div class="box box-solid no-mb">
     <?php
     $columns = \admin\views\Index\template\listColumns::getColumns($searchModel);
     $item = [

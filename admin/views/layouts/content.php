@@ -27,9 +27,12 @@ use dmstr\widgets\Alert;
             ]
         ) ?>
     </section>
-
-    <section class="content">
-        <?= Alert::widget() ?>
+    <?php
+    $content_no_left = '';
+    if(strpos($_SERVER['REQUEST_URI'],"admin") === false){
+        $content_no_left = 'content-no-left';
+    }?>
+    <section class="content <?= $content_no_left ?>">
         <?= $content ?>
     </section>
 </div>

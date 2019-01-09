@@ -53,4 +53,11 @@ class IndexController extends BaseController
         var_dump($attribute);
         return ['success'=>true,'result' => 1];
     }
+
+    public function actionDetail()
+    {
+        $searchModel = new SearchOrder();
+        $dataProvider = $searchModel->search();
+        return $this->render('detail1',['searchModel'=>$searchModel,'dataProvider' => $dataProvider]);
+    }
 }
