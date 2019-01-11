@@ -9,10 +9,13 @@ namespace admin\Modules\System\models;
 
 use admin\Modules\System\models\Tables\Tags;
 use yii\data\ActiveDataProvider;
+use yii\helpers\ArrayHelper;
 
 class SearchTags extends Tags
 {
     public $query;
+
+    public $objectsArray;
 
     public function search()
     {
@@ -28,5 +31,12 @@ class SearchTags extends Tags
             ],
         ]);
         return $dataProvider;
+    }
+
+    public function rules()
+    {
+        return ArrayHelper::merge(parent::rules(),[
+            [['objectsArray'],'safe']
+        ]);
     }
 }

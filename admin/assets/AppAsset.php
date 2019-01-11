@@ -18,6 +18,7 @@ class AppAsset extends AssetBundle
         'js/test.js',
         'js/searchBox.js',
         'js/fixedHead.js',
+        'js/ajaxForm.js',
     ];
     public $depends = [
         'common\assets\CommonAsset',
