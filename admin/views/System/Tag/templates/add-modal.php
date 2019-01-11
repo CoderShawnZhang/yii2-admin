@@ -7,14 +7,14 @@ Modal::begin([
    'toggleButton' => ['label' => '新增','class' => 'btn btn-orange btn-w82 ml5'],
    'options' => ['tabindex' => false]
 ]);
-$form = DetailActiveForm::begin(['detailModel' => $addModal, 'id' => 'tagForm', 'action' => ['add']]); ?>
+$form = DetailActiveForm::begin(['detailModel' => $addModal, 'id' => 'tagForm', 'action' => ['add'],'type' => DetailActiveForm::TYPE_HORIZONTAL,'formConfig' => ['labelSpan' => 3, 'deviceSize' => DetailActiveForm::SIZE_SMALL]]); ?>
 <table class="table table-bordered">
     <tbody>
         <tr>
-            <td><?= $form->fieldInput('name') ?></td>
+            <td><?= $form->fieldInput('name',['placeholder'=>'请输入标签名称！']) ?></td>
         </tr>
         <tr>
-            <td><?= $form->fieldColor('color',[],['options' => ['readOnly' => true]]) ?></td>
+            <td><?= $form->fieldColor('color',[],['options' => ['readOnly' => true,'style'=>'width:245px']]) ?></td>
         </tr>
         <tr>
             <td><?= $form->fieldSelect2('objectsArray',[],[

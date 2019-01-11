@@ -37,11 +37,17 @@ class DetailActiveForm extends AjaxActiveForm
      * 文本框
      * @param $attribute
      * @param array $options
-     * @return \kartik\form\ActiveField
+     * @return $this
+     * @throws \yii\base\InvalidConfigException
      */
     public function fieldInput($attribute,$options = [])
     {
-        return $this->field($this->detailModel,$attribute,$options);
+        $placeholder = '';
+        if(isset($options['placeholder'])){
+            $placeholder = $options['placeholder'];
+            unset($options['placeholder']);
+        }
+        return $this->field($this->detailModel,$attribute,$options)->textInput(['placeholder' => $placeholder]);
     }
 
     /**

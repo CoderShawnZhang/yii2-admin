@@ -42,9 +42,9 @@
     font-weight: bold;
     line-height: 30px;
 }
-.content-header h1 span{
-    padding-right:10px;
-}
+/*.content-header h1 span{*/
+    /*padding-right:10px;*/
+/*}*/
 .table{
     margin-bottom: 0;
 }
@@ -263,4 +263,8 @@ ul.pagination {
 .input-group-html5 .input-group-addon {
     width: auto;
     padding: 5px 6px;
+}
+
+.form-group{
+    margin-bottom:0;
 }

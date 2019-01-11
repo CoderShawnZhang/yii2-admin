@@ -39,4 +39,11 @@ class SearchTags extends Tags
             [['objectsArray'],'safe']
         ]);
     }
+
+    public function attributeLabels()
+    {
+        return ArrayHelper::merge(parent::attributeLabels(),[
+            'objectsArray' => '使用对象',
+        ]);
+    }
 }
