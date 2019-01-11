@@ -13,9 +13,11 @@ use yii\web\Controller;
 
 class BaseController extends Controller
 {
+    /**
+     * @throws \yii\web\ForbiddenHttpException
+     */
     public function actionIndex()
     {
-
         $user = \Yii::$app->getUser();
         if ($user->getIsGuest()) {
             $user->loginRequired();

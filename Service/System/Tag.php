@@ -13,9 +13,13 @@ use Service\System\Models\TagModel;
 use admin\components\widgets\EditableColumn;
 use admin\Widgets\ActionColumn;
 use yii\helpers\Url;
+use Service\Base\Service;
 
-class Tag extends \Service\Base\Service
+class Tag extends Service
 {
+    /**
+     * @return array
+     */
     public static function tagColumns()
     {
         $deleteUrl = Url::toRoute(['delete']);

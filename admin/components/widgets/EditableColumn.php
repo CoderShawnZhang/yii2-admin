@@ -12,6 +12,7 @@ use kartik\editable\Editable;
 use kartik\popover\PopoverX;
 use yii\helpers\ArrayHelper;
 use kartik\grid\EditableColumn as BaseEditableColumn;
+use mdm\admin\components\Helper;
 
 class EditableColumn extends BaseEditableColumn
 {
@@ -27,12 +28,17 @@ class EditableColumn extends BaseEditableColumn
         }
 
         if (!empty($route)) {
-            $auth = \mdm\admin\components\Helper::checkRoute($route);
+            $auth = Helper::checkRoute($route);
         }
 
         $this->readonly = $auth ? false : true;
     }
 
+    /**
+     * @param $attribute
+     * @param array $config
+     * @return array
+     */
     public static function textColumn($attribute, $config = [])
     {
         return self::outPut($attribute,
@@ -44,8 +50,9 @@ class EditableColumn extends BaseEditableColumn
 
     /**
      * 颜色编辑框
+     *
      * @param $attribute
-     * @param string $action
+     * @param array $configs
      * @return array
      */
     public static function colorColumn($attribute, $configs = [])
@@ -54,7 +61,7 @@ class EditableColumn extends BaseEditableColumn
             [
                 'editableOptions' => function ($model) use ($configs) {
                     return ArrayHelper::merge(self::getEditableOptions(), [
-                        'inputType' => \kartik\editable\Editable::INPUT_COLOR,
+                        'inputType' => Editable::INPUT_COLOR,
                         'editableValueOptions' => [
                             'class' => 'kv-editable-value kv-editable-link color-column tag-style',
                             'style' => 'color:' . $model->color . '; min-width: 60px; padding:3px; border: 1px solid ' . $model->color,
@@ -82,6 +89,11 @@ class EditableColumn extends BaseEditableColumn
         ];
     }
 
+    /**
+     * @param $attribute
+     * @param array $configs
+     * @return array
+     */
     public static function outPut($attribute,$configs = [])
     {
         return ArrayHelper::merge([

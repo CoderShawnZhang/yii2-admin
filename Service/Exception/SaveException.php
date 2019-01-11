@@ -8,10 +8,12 @@
 
 namespace Service\Exception;
 
-
 use Service\Base\Exception;
-use Throwable;
 
+/**
+ * Class SaveException
+ * @package Service\Exception
+ */
 class SaveException extends Exception
 {
     const CODE = 2;

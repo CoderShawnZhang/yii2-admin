@@ -1,6 +1,7 @@
 <?php
 use \admin\Widgets\Modal;
 use \common\widgets\DetailActiveForm;
+use \common\widgets\Button;
 Modal::begin([
    'header' => '<h4 class="modal-title">新建标签</h4>',
    'toggleButton' => ['label' => '新增','class' => 'btn btn-orange btn-w82 ml5'],
@@ -30,7 +31,7 @@ $form = DetailActiveForm::begin(['detailModel' => $addModal, 'id' => 'tagForm', 
     </tbody>
 </table>
 <div class="modal-footer">
-    <?= \common\widgets\Button::submitButton()?>
+    <?= Button::submitButton()?>
     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 </div>
 <?php DetailActiveForm::end() ?>

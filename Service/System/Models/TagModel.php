@@ -7,7 +7,13 @@
  */
 namespace Service\System\Models;
 
-class TagModel extends \Service\System\Tables\Tags
+use Service\System\Tables\Tags;
+
+/**
+ * Class TagModel
+ * @package Service\System\Models
+ */
+class TagModel extends Tags
 {
 
 }

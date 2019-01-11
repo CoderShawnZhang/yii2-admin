@@ -8,7 +8,6 @@
 
 namespace admin\components\widgets;
 
-
 use kartik\widgets\ActiveForm;
 use light\widgets\AjaxFormAsset;
 use yii\base\InvalidConfigException;
