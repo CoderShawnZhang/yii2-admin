@@ -1,5 +1,9 @@
 .content-no-left {
-    padding-left: 0;
+    padding: 0;
+}
+.content-header{
+    margin-bottom: 10px;
+    padding: 10px 15px 0 15px;
 }
 .boxList {
     margin-bottom: 0;
@@ -12,6 +16,16 @@
     background-color: #8f8cd6;
     border-color: #8f8cd6;
     min-width: 82px;
+}
+.btn.btn-orange {
+    background-color: #ff9959;
+    border-color: #ff9959;
+    color: #fff;
+    min-width: 82px;
+}
+.box.box-solid > .box-header .btn.btn-orange:hover,
+.box.box-solid > .box-header a.btn-orange:hover {
+    background: #ed8c51;
 }
 
 .btn.btn-default {
@@ -243,4 +257,10 @@ ul.pagination {
     border-color: #8f8cd6;
     color: #8f8cd6;
     min-width: 82px;
+}
+
+/**color 颜色选择框颜色宽度*/
+.input-group-html5 .input-group-addon {
+    width: auto;
+    padding: 5px 6px;
 }

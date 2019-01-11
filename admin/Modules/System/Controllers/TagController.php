@@ -8,11 +8,18 @@
 namespace admin\Modules\System\Controllers;
 
 use admin\controllers\BaseController;
+use admin\Modules\System\models\SearchTags;
 
 class TagController extends BaseController
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new SearchTags();
+        $searchModel->load(\Yii::$app->request->get());
+        $dataProvider = $searchModel->search();
+        return $this->render('index',[
+            'searchModel'=>$searchModel,
+            'dataProvider' => $dataProvider
+        ]);
     }
 }
