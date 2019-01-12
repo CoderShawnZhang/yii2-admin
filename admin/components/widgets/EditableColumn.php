@@ -59,17 +59,22 @@ class EditableColumn extends BaseEditableColumn
     {
         return self::outPut($attribute,
             [
-                'editableOptions' => function ($model) use ($configs) {
+                'editableOptions' => function ($model) use ($configs,$attribute) {
                     return ArrayHelper::merge(self::getEditableOptions(), [
                         'inputType' => Editable::INPUT_COLOR,
                         'editableValueOptions' => [
                             'class' => 'kv-editable-value kv-editable-link color-column tag-style',
-                            'style' => 'color:' . $model->color . '; min-width: 60px; padding:3px; border: 1px solid ' . $model->color,
+                            'style' => 'color:' . $model->$attribute . '; min-width: 60px; padding:3px; border: 1px solid ' . $model->$attribute,
                         ]
                     ], $configs);
                 },
             ]
         );
+    }
+
+    public static function select2Column()
+    {
+
     }
 
     public static function getEditableOptions()

@@ -10,6 +10,7 @@ namespace admin\Modules\System\Controllers;
 use admin\controllers\BaseController;
 use admin\Modules\System\models\SearchTags;
 use Service\System\Tag as TagService;
+use yii\helpers\ArrayHelper;
 use yii\web\Response;
 use Yii;
 
@@ -32,12 +33,27 @@ class TagController extends BaseController
         ]);
     }
 
+    /**
+     * 新增标签
+     * @return array
+     */
     public function actionAdd()
     {
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        return ['data' => 'success', 'message' => '', 'success' => true];
+        try{
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            $postData = Yii::$app->request->post();
+            $data = ArrayHelper::getValue($postData, 'SearchTags');
+            TagService::create($data);
+            return ['data' => 'success', 'message' => '', 'success' => true];
+        } catch (\Exception $e) {
+            return ['data' => 'error', 'message' => $e->getMessage(), 'success' => false];
+        }
     }
 
+    /**
+     * 编辑标签
+     * @return array
+     */
     public function actionEdit()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;

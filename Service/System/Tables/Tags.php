@@ -20,8 +20,8 @@ class Tags extends ActiveRecord
     public function rules()
     {
         return [
-          [['name','color','desc','objects','creater'],'string'],
-          [['status'],'integer'],
+            [['name','color','desc','objects','creater'],'string'],
+            [['status'],'integer'],
         ];
     }
 
@@ -31,6 +31,7 @@ class Tags extends ActiveRecord
           'name' => '标签名称',
           'color' => '标签颜色',
           'objects' => '使用对象',
+          'objectsArray' => '使用对象',
           'desc' => '描述'
         ];
     }

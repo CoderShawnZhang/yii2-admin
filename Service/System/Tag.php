@@ -27,7 +27,7 @@ class Tag extends Service
             ActionColumn::deleteColumn($deleteUrl),
             EditableColumn::textColumn('name'),
             EditableColumn::colorColumn('color', ['options' => ['options' => ['readOnly' => true]]]),
-            EditableColumn::textColumn('objects'),
+            EditableColumn::textColumn('objectsArray'),
             EditableColumn::textColumn('desc'),
         ];
         return $columns;
@@ -43,6 +43,20 @@ class Tag extends Service
     {
         $model = TagModel::findOneOrFailed(['id' => $id]);
         if(!$model->load($data,'') || !$model->save()) {
+            throw new SaveException($model->getErrorStr());
+        }
+        return $model;
+    }
+
+    /**
+     * @param $data
+     * @return TagModel
+     * @throws SaveException
+     */
+    public static function create($data)
+    {
+        $model = new TagModel();
+        if(!$model->load($data,'') || !$model->save()){
             throw new SaveException($model->getErrorStr());
         }
         return $model;

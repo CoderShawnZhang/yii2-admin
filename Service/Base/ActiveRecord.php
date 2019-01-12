@@ -13,4 +13,17 @@ use Service\Traits\BaseActiveRecord;
 class ActiveRecord extends \yii\db\ActiveRecord
 {
     use BaseActiveRecord;
+
+    /**
+     * 格式化错误信息
+     * @return string
+     */
+    public function getErrorStr()
+    {
+        $errors = [];
+        foreach($this->getErrors() as $error) {
+            $errors[] = implode(' ',$error);
+        }
+        return implode(' ',$errors);
+    }
 }
