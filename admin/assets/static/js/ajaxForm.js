@@ -10,3 +10,8 @@ var ajaxFormSuccess = function () {
 var ajaxFormError = function () {
   alert('ajaxFormError');
 };
+
+/**删除单条*/
+var actionDel = function(){
+
+}

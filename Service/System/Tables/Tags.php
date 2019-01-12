@@ -21,18 +21,18 @@ class Tags extends ActiveRecord
     {
         return [
             [['name','color','desc','objects','creater'],'string'],
-            [['status'],'integer'],
+            [['status','created_at'],'integer'],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-          'name' => '标签名称',
-          'color' => '标签颜色',
-          'objects' => '使用对象',
-          'objectsArray' => '使用对象',
-          'desc' => '描述'
+            'name' => '标签名称',
+            'color' => '标签颜色',
+            'objects' => '使用对象',
+            'desc' => '描述',
+            'created_at' => '创建时间'
         ];
     }
 }

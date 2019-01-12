@@ -72,11 +72,60 @@ class EditableColumn extends BaseEditableColumn
         );
     }
 
-    public static function select2Column()
+    /**
+     * 下拉选择
+     * @param $attribute
+     * @param array $data
+     * @param array $config
+     * @return array
+     */
+    public static function select2Column($attribute, $data = [], $config = [])
     {
-
+        return self::outPut(
+            $attribute,
+            [
+                'editableOptions' => function ($model) use ($config,$data) {
+                    return ArrayHelper::merge(self::getEditableOptions(),[
+                       'inputType' => Editable::INPUT_SELECT2,
+                       'displayValue' => $model->objects,
+                       'options' => [
+                           'data' => $data,
+                           'options' => [
+                               'multiple' => true,
+                               'placeholder' => '请选择',
+                           ],
+                       ]
+                    ],$config);
+                }
+            ]
+        );
     }
 
+    public static function dateColumn($attribute, $configs = [])
+    {
+        return self::outPut(
+          $attribute,
+          [
+              'editableOptions' => function ($model) use ($configs) {
+                return ArrayHelper::merge(self::getEditableOptions(),[
+                   'inputType' => Editable::INPUT_DATE,
+                   'options' => [
+                       'pluginOptions' => [
+                           'autoclose' => true,
+                           'format' => 'yyyy/mm/dd',
+                           'todayHighlight' => false
+                       ],
+                   ]
+                ],$configs);
+              }
+          ]
+        );
+    }
+
+    /**
+     * Editable基础属性
+     * @return array
+     */
     public static function getEditableOptions()
     {
         return [

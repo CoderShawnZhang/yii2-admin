@@ -9,7 +9,6 @@ $js = <<<JS
 var _opt = {$opts};
 JS;
 $this->registerJs($js);
-$this->registerJs($this->render('js/test.js'));
 $this->registerJs($this->render('js/_index_script.js'));
 ?>
 <!--Header-->

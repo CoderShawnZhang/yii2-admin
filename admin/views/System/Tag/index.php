@@ -1,5 +1,6 @@
 <?php
-use Service\System\Tag as TagService;
+use yii\helpers\Url;
+$this->registerJs($this->render('js/_index_script.js'));
 ?>
 <?php $this->beginBlock('content-header'); ?>
 <h1>
@@ -10,14 +11,5 @@ use Service\System\Tag as TagService;
 </h1>
 <?php $this->endBlock(); ?>
 <div class="box box-solid no-mb">
-    <div class="box-body no-padding">
-        <?php
-        $columns = TagService::tagColumns();
-        $item = [
-            'dataProvider' => $dataProvider,
-            'columns' => $columns
-        ];
-        echo \admin\Widgets\GridView::indexWidget($item);
-        ?>
-    </div>
+    <div class="box-body no-padding tab-pane" data-url="<?= Url::toRoute('list')?>"></div>
 </div>

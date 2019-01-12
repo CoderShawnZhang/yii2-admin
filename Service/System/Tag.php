@@ -8,15 +8,19 @@
 
 namespace Service\System;
 
+use Service\Base\Exception;
 use Service\Exception\SaveException;
+use Service\System\Models\Search\TagSearch;
 use Service\System\Models\TagModel;
 use admin\components\widgets\EditableColumn;
 use admin\Widgets\ActionColumn;
+use ToastPack\Toast;
 use yii\helpers\Url;
 use Service\Base\Service;
 
 class Tag extends Service
 {
+    public static $query;
     /**
      * @return array
      */
@@ -27,10 +31,27 @@ class Tag extends Service
             ActionColumn::deleteColumn($deleteUrl),
             EditableColumn::textColumn('name'),
             EditableColumn::colorColumn('color', ['options' => ['options' => ['readOnly' => true]]]),
-            EditableColumn::textColumn('objectsArray'),
+            EditableColumn::select2Column('objectsArray',[1,2,3,4,5,6,7,8]),
             EditableColumn::textColumn('desc'),
+            EditableColumn::dateColumn('created_at'),
         ];
         return $columns;
+    }
+
+    /**
+     * @param array $condition
+     * @return TagSearch
+     * @throws Exception
+     */
+    public static function getList($condition = [])
+    {
+        try{
+            $tagModel = new TagModel();
+            return $tagModel->getSearchModel($condition);
+        } catch (\Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+
     }
     /**
      * @param $id

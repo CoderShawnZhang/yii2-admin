@@ -8,7 +8,7 @@
 namespace admin\Modules\System\Controllers;
 
 use admin\controllers\BaseController;
-use admin\Modules\System\models\SearchTags;
+use Service\Base\Exception;
 use Service\System\Tag as TagService;
 use yii\helpers\ArrayHelper;
 use yii\web\Response;
@@ -22,15 +22,39 @@ class TagController extends BaseController
         $this->viewPath = '@admin/views/System/Tag';
     }
 
+    /**
+     *
+     * @return string
+     * @throws Exception
+     */
     public function actionIndex()
     {
-        $searchModel = new SearchTags();
-        $searchModel->load(Yii::$app->request->get());
-        $dataProvider = $searchModel->search();
-        return $this->render('index',[
-            'searchModel'=>$searchModel,
-            'dataProvider' => $dataProvider
-        ]);
+        try{
+            $request = Yii::$app->request->get();
+            $searchModel = TagService::getList($request);
+            $dataProvider = $searchModel->dataProvider();
+            return $this->render('index',[
+                'searchModel'=>$searchModel,
+                'dataProvider' => $dataProvider
+            ]);
+        }catch (\Exception $e){
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public function actionList()
+    {
+        try{
+            $request = Yii::$app->request->get();
+            $searchModel = TagService::getList($request);
+            $dataProvider = $searchModel->dataProvider();
+            return $this->renderAjax('list',[
+                'searchModel'=>$searchModel,
+                'dataProvider' => $dataProvider
+            ]);
+        }catch (\Exception $e){
+            throw new Exception($e->getMessage());
+        }
     }
 
     /**
@@ -68,5 +92,16 @@ class TagController extends BaseController
         } catch (\Exception $e) {
             return ['output' => '', 'message' => $e->getMessage()];
         }
+    }
+
+    /**
+     * 删除标签
+     * 
+     * @return array
+     */
+    public function actionDelete()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return ['success'=>true];
     }
 }

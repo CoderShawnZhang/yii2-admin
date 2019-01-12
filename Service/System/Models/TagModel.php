@@ -7,6 +7,8 @@
  */
 namespace Service\System\Models;
 
+use Service\Base\Exception;
+use Service\System\Models\Search\TagSearch;
 use Service\System\Tables\Tags;
 use yii\helpers\ArrayHelper;
 
@@ -26,6 +28,15 @@ class TagModel extends Tags
         ]);
     }
 
+    public function attributeLabels()
+    {
+        return ArrayHelper::merge(parent::attributeLabels(),
+            [
+                'objectsArray' => '使用对象'
+            ]
+        );
+    }
+
     public function load($data, $formName = null)
     {
         if (parent::load($data, $formName)) {
@@ -34,5 +45,16 @@ class TagModel extends Tags
             }
         }
         return true;
+    }
+
+    /**
+     * @param $condition
+     * @return TagSearch
+     */
+    public function getSearchModel($condition)
+    {
+        $model = new TagSearch();
+        $model->load($condition);
+        return $model;
     }
 }

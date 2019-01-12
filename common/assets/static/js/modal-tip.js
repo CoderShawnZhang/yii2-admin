@@ -49,6 +49,23 @@ var Modal = {
         }
     },
     confirm:function (message) {
-        alert(message);
-    },
+        modalConfirm.find('.modal-info').html(message);
+        modalConfirm.modal({backdrop:'static',keybord:true});
+        modalConfirm.modal('show');
+        return {
+            on: function (callback) {
+                if (callback && callback instanceof Function) {
+                    modalConfirm.find('.ok').click(function () {
+                        modalConfirm.find('.ok').unbind();
+                        callback(true);
+                    });
+                    modalConfirm.find('.cancel').click(function () {
+                        modalConfirm.find('.ok').unbind();
+                        modalConfirm.find('.cancel').unbind();
+                        callback(false);
+                    });
+                }
+            }
+        };
+    }
 }
