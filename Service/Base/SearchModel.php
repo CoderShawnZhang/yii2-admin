@@ -10,7 +10,7 @@ use yii\data\ActiveDataProvider;
 class SearchModel extends Model
 {
     public $query;
-    public $pageSize = 1;
+    public $pageSize;
     public $page;
 
     public function page($page = 1)

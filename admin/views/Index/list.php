@@ -8,7 +8,7 @@
         'id' => 'state'.Yii::$app->request->get('tabId',1),
         'pjax' => false,
         'dataProvider' => $dataProvider,
-        'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed table-index-list min-w1800'],
+        'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed table-index-list'],
         'layout' => '{items}<div class="box-footer clearfix"><div class="pull-right">{pager}</div></div>',
         'pager' => [
             'class' => 'admin\Widgets\LinkPager',

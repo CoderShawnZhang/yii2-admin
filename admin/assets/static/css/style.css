@@ -16,6 +16,131 @@ table,#navTabs{
     line-height: 2;
 }
 
+table.w1612 {
+    width: 1612px;
+}
+table.w1630 {
+    width: 1630px;
+}
+table.w1800 {
+    width: 1800px;
+}
+table.min-w1300 {
+    min-width: 1300px;
+}
+table.min-w1800 {
+    min-width: 1800px;
+}
+table.min-w1920 {
+    min-width: 1920px;
+}
+table.w2000 {
+    width: 2000px;
+}
+table.w2500 {
+    width: 2500px;
+}
+table.w2800 {
+    width: 2800px;
+}
+.th-w30 {
+    width: 30px;
+}
+.th-w40 {
+    width: 40px;
+}
+.th-w50 {
+    width: 50px;
+}
+.th-w60 {
+    width: 60px;
+}
+.th-w70 {
+    width: 70px;
+}
+.th-w80 {
+    width: 80px;
+}
+.th-w90 {
+    width: 90px;
+}
+.th-w100 {
+    width: 100px;
+}
+.th-w115 {
+    width: 115px;
+}
+.th-w120 {
+    width: 120px;
+}
+.th-w125 {
+    width: 125px;
+}
+.th-w130 {
+    width: 130px;
+}
+.th-w145 {
+    width: 145px;
+}
+.th-w150 {
+    width: 150px;
+}
+.th-w170 {
+    width: 170px;
+}
+.th-w175 {
+    width: 175px;
+}
+.th-w180 {
+    width: 180px;
+}
+.th-w200 {
+    width: 200px;
+}
+.th-w220 {
+    width: 220px;
+}
+.th-w225 {
+    width: 225px;
+}
+.th-w250 {
+    width: 250px;
+}
+.th-w280 {
+    width: 280px;
+}
+.th-w350 {
+    width: 350px;
+}
+.th-w400 {
+    width: 400px;
+}
+.th-w468 {
+    width: 468px;
+}
+.th-w500 {
+    width: 500px;
+}
+.th-w550 {
+    width: 550px;
+}
+.th-w600 {
+    width: 600px;
+}
+.th-w1000 {
+    width: 1000px;
+}
+.th-w1100 {
+    width: 1100px;
+}
+.t-center {
+    text-align: center;
+}
+.t-right {
+    text-align: right;
+}
+
+
 /**RBAC btn*/
 .btn-success {
     background-color: #5f5ca8;

@@ -13,8 +13,5 @@ use yii\web\Controller;
 
 class AuthController extends Controller
 {
-    public function actionLogin()
-    {
-        var_dump(11);die;
-    }
+
 }

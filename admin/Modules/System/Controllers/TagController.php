@@ -96,7 +96,7 @@ class TagController extends BaseController
 
     /**
      * 删除标签
-     * 
+     *
      * @return array
      */
     public function actionDelete()

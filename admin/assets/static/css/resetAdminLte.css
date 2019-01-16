@@ -12,16 +12,141 @@
     border-top: none;
     margin-bottom: 10px;
 }
+/*紫色按钮*/
+.btn:active {
+    box-shadow: none;
+}
 .btn.btn-info {
     background-color: #8f8cd6;
     border-color: #8f8cd6;
     min-width: 82px;
 }
+.btn.btn-info:focus,
+.btn.btn-info.focus {
+    background-color: #8f8cd6;
+    border-color: #8f8cd6;
+    outline: none;
+    box-shadow: none;
+}
+.btn.btn-info:hover,
+.btn.btn-info.hover {
+    background-color: #8280c5;
+    border-color: #8280c5;
+    outline: none;
+    box-shadow: none;
+}
+.btn.btn-info:active,
+.btn.btn-info:active:hover,
+.btn.btn-info:active:focus,
+.btn.btn-info:visited:hover {
+    background-color: #7674b3;
+    border-color: #7674b3;
+    outline: none;
+    box-shadow: none;
+}
+.box.box-solid > .box-header .btn.btn-info:hover,
+.box.box-solid > .box-header a.btn-info:hover {
+    background-color: #8280c5;
+    border-color: #8280c5;
+}
+/*黄色按钮*/
 .btn.btn-orange {
     background-color: #ff9959;
     border-color: #ff9959;
     color: #fff;
     min-width: 82px;
+}
+.btn.btn-orange:hover,
+.btn.btn-orange.hover {
+    background-color: #ed8c51;
+    border-color: #ed8c51;
+    color: #fff;
+}
+.btn.btn-orange:focus {
+    background-color: #ff9959;
+    border-color: #ff9959;
+    color: #fff;
+    outline: none;
+}
+.btn.btn-orange:active {
+    background-color: #d88049;
+    border-color: #d88049;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+.box.box-solid > .box-header .btn.btn-orange:hover,
+.box.box-solid > .box-header a.btn-orange:hover {
+    background: #ed8c51;
+}
+/*白底灰边按钮*/
+.btn.btn-default {
+    background-color: #fff;
+    border-color: #c7c7c7;
+}
+.btn.btn-default:hover,
+.btn.btn-default.hover {
+    background-color: #eaeaea;
+    border-color: #b7b7b7;
+}
+.btn.btn-default:active {
+    background-color: #d6d6d6;
+    border-color: #a7a7a7;
+    outline: none;
+    box-shadow: none;
+}
+/*白底紫边按钮*/
+.btn.btn-purple {
+    background-color: #fff;
+    border-color: #8f8cd6;
+    color: #8f8cd6;
+    min-width: 82px;
+}
+.btn.btn-purple:hover,
+.btn.btn-purple.hover {
+    background-color: #8f8cd6;
+    border-color: #8f8cd6;
+    color: #fff;
+}
+.btn.btn-purple:active {
+    background-color: #8280c5;
+    border-color: #8280c5;
+    color: #fff;
+    outline: none;
+}
+.box.box-solid > .box-header .btn.btn-purple:hover,
+.box.box-solid > .box-header a.btn-purple:hover {
+    background-color: #8f8cd6;
+    border-color: #8f8cd6;
+    color: #fff;
+}
+.box.box-solid > .box-header .btn.btn-purple:active,
+.box.box-solid > .box-header a.btn-purple:active {
+    background-color: #8280c5;
+    border-color: #8280c5;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+/*白底红边按钮*/
+.btn.btn-red {
+    background-color: #fff;
+    border-color: #ff8080;
+    color: #ff8080;
+    min-width: 82px;
+}
+.btn.btn-red:hover,
+.btn.btn-red.hover {
+    background-color: #ff8080;
+    border-color: #ff8080;
+    color: #fff;
+}
+.btn.btn-red:active {
+    background-color: #eb7575;
+    border-color: #eb7575;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
 }
 .box.box-solid > .box-header .btn.btn-orange:hover,
 .box.box-solid > .box-header a.btn-orange:hover {
@@ -251,7 +376,6 @@ ul.pagination {
 
 
 /**button*/
-
 .btn.btn-purple {
     background-color: #fff;
     border-color: #8f8cd6;
@@ -265,6 +389,17 @@ ul.pagination {
     padding: 5px 6px;
 }
 
-.form-group{
-    margin-bottom:0;
+.control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.del_level,.del_level_first{
+    line-height: 34px;
+}
+
+#add_type{
+    line-height: 34px;
+    padding: 0px;
 }

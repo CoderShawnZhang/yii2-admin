@@ -56,7 +56,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -72,6 +71,8 @@ return [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
+            'debug/*',
+            'gii/*',
             'Auth/login/login',
             'Auth/login/logout',
             'base/index',

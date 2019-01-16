@@ -14,14 +14,16 @@ use Service\System\Models\Search\TagSearch;
 use Service\System\Models\TagModel;
 use admin\components\widgets\EditableColumn;
 use admin\Widgets\ActionColumn;
-use ToastPack\Toast;
 use yii\helpers\Url;
 use Service\Base\Service;
 
 class Tag extends Service
 {
     public static $query;
+
     /**
+     * tag 列表,GridView列
+     *
      * @return array
      */
     public static function tagColumns()
