@@ -5,18 +5,34 @@
 
 namespace Service\System\Models;
 
+use Service\System\Querys\ApprovalTypeQuery;
 use Service\System\Tables\ApprovalType;
 
 class ApprovalTypeModel extends ApprovalType
 {
-    const APPROVAL_IS_DEL = 0;
+    const IS_DEL = 1;
+    const NO_DEL = 0;
 
-    public function beforeSave($insert)
+    public static function find()
     {
-        if (!parent::beforeSave($insert)) {
-            return false;
-        }
+        return new ApprovalTypeQuery(get_called_class(),['tableName'=>self::className()]);
+    }
 
-        return true;
+    public static function getOne($condition)
+    {
+        return self::find()->where($condition)->notDel()->one();
+    }
+
+    public static function getList($condition)
+    {
+       return self::find()->where($condition)->notDel()->asArray()->all();
+    }
+
+    public static function insertData($data = [])
+    {
+        $modal = new self();
+        $modal->load($data,'');
+        $modal->isDel = ApprovalProcessModel::NO_DEL;
+        $modal->save();
     }
 }

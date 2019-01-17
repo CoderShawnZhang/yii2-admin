@@ -1,25 +1,23 @@
 <!-- 添加审批类型 -->
-<?php
-use \admin\Widgets\Modal;
-use \common\widgets\DetailActiveForm;
-use \common\widgets\Button;
-Modal::begin([
-    'header' => '<h4 class="modal-title">添加审批类型</h4>',
-    'toggleButton' => ['label' => '添加类型','class' => 'btn btn-orange btn-w82 ml5'],
-    'options' => ['tabindex' => false]
-]);
-$form = DetailActiveForm::begin(['detailModel' => $addModal, 'id' => 'tagForm', 'action' => ['add-type'],'type' => DetailActiveForm::TYPE_HORIZONTAL,'formConfig' => ['labelSpan' => 3, 'deviceSize' => DetailActiveForm::SIZE_SMALL]]);
-?>
-<table class="table table-bordered">
-    <tbody>
-    <tr>
-        <td><input type="text" class="form-control" name="type_name" placeholder="类型名称" id="add_type_name"></td>
-    </tr>
-    </tbody>
-</table>
-<div class="modal-footer">
-    <?= Button::submitButton()?>
-    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+<div class="type_modal">
+    <div class="modal type-box">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="关闭"><span
+                                aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">添加审批类型</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="类型名称" id="add_type_name">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info btn-w82 mr5" id="submit_add_type"
+                            data-url="<?= \yii\helpers\Url::toRoute('/System/approval/add-type') ?>">提交
+                    </button>
+                    <button type="button" class="btn btn-default btn-w82 cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<?php DetailActiveForm::end() ?>
-<?php Modal::end(); ?>

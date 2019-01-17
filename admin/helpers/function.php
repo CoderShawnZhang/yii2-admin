@@ -15,3 +15,13 @@ if(! function_exists('dd')) {
         echo '</pre>';
     }
 }
+
+if(! function_exists('tow_array_one')){
+    function tow_array_one($array) {
+        $arr = [];
+        foreach($array as $key => $val){
+            array_push($arr,$val[0]);
+        }
+        return $arr;
+    }
+}

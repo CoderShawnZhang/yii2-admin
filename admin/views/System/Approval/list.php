@@ -4,7 +4,7 @@
 <div class="box box-solid no-mb">
 <?php
 use Service\System\Approval as ApprovalService;
-$columns = ApprovalService::tagColumns();
+$columns = ApprovalService::process()->tagColumns();
 $item = [
     'id' => 'state'.Yii::$app->request->get('tabId',1),
     'pjax' => false,

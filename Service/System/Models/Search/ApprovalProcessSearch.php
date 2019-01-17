@@ -39,4 +39,5 @@ class ApprovalProcessSearch extends SearchModel
         $this->query = $query;
         return $this;
     }
+
 }

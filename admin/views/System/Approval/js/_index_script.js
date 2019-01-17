@@ -48,8 +48,9 @@ $('#add_level').click(function () {
     $('#level_table tbody:eq(1)').append(html);
     $('#level_table tbody tr:last').find('select').select2({'allowClear': true});
     $('#level_table tbody tr:last').find('.select2').removeClass('select2-container--default').addClass('select2-container--krajee');
-    $('#level_table tbody tr:last').find('.user_id').attr('name', 'sub_process[user_id][' + index + '][]');
-    $('#level_table tbody tr:last').find('.cc_user_id').attr('name', 'sub_process[cc_user_id][' + index + '][]');
+    $('#level_table tbody tr:last').find('.approve_person').attr('name', 'sub_process[approve_person][' + index + '][]');
+    $('#level_table tbody tr:last').find('.carbon_copy').attr('name', 'sub_process[carbon_copy][' + index + '][]');
+    $('#level_table tbody tr:last').find('.level_name').attr('name', 'sub_process[level_name][' + index + '][]');
     $('.level_id').eq(index).html(level_id);
 });
 
@@ -73,3 +74,43 @@ $('#level_table').on('click', '.del_level', function () {
         }
     }
 });
+
+
+/*添加审批类型弹窗*/
+$('#add_type').click(function () {
+    $('.type-box').show();
+});
+
+/*关闭弹窗*/
+$('.modal-header button').click(function () {
+    $('div.modal').hide();
+});
+
+/*取消*/
+$('.modal-footer .cancel').click(function () {
+    $('div.modal').hide();
+});
+
+/*审批类型提交*/
+$('#submit_add_type').click(function () {
+    var type_name = $('#add_type_name').val(), url = $(this).attr('data-url');
+    $.post(
+        url,
+        {
+            type_name: type_name,
+            _csrf: yii.getCsrfToken()
+        },
+        function (data) //回传函数
+        {
+            if (data) {
+                $('#type_id').prepend("<option value='" + data + "' selected='selected'>" + type_name + "</option>");
+                $('#type_name').val(type_name);
+                $('.type-box').hide();
+                Modal.alert('添加成功！', 'success').on(function(){
+                    window.location.reload();
+                });
+            } else {
+                Modal.alert('添加失败！', 'error');
+            }
+        });
+})

@@ -13,11 +13,6 @@ class ApprovalProcessQuery extends \yii\db\ActiveQuery
     public $tableName;
     public $isDel;
 
-    /*public function active()
-    {
-        return $this->andWhere('[[status]]=1');
-    }*/
-
     /**
      * {@inheritdoc}
      * @return ApprovalProcess[]|array
@@ -38,12 +33,13 @@ class ApprovalProcessQuery extends \yii\db\ActiveQuery
 
     public function notDel()
     {
-        $this->isDel = 1;
+        $this->isDel = ApprovalProcessModel::NO_DEL;
         return $this->andWhere([ApprovalProcessModel::tableName().'.isDel' => $this->isDel]);
     }
 
     public function isDel()
     {
-
+        $this->isDel = ApprovalProcessModel::IS_DEL;
+        return $this->andWhere([ApprovalProcessModel::tableName().'.isDel' => $this->isDel]);
     }
 }

@@ -22,12 +22,9 @@ class m190114_092138_approval_process_level extends Migration
             'process_id' => $this->integer(11)->notNull(),
             'level_name' => $this->string(64)->notNull(),
             'level' => $this->integer(11)->notNull(),
-            'approve_person' => $this->integer(11),//审批人
             'approve_name' => $this->string(24),
-            'role' => $this->tinyInteger(1)->notNull(),
-            'belong' => $this->char(36),//归属
-            'carbon_copy' => $this->text(),
-            'approve_group' => $this->text(),
+            'approve_person' => $this->text(),//审批人
+            'carbon_copy' => $this->text(),//抄送
         ],$tableOptions);
     }
 

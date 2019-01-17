@@ -23,7 +23,7 @@ class ApprovalType extends ActiveRecord
      */
     public static function tableName()
     {
-        return 'approval_type';
+        return '{{%approval_type}}';
     }
 
     /**

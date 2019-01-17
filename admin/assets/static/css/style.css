@@ -363,3 +363,46 @@ a {
 
     border: 1px solid #7a76cf;
 }
+
+.mt10 {
+    margin-top: 10px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.mr5 {
+    margin-right: 5px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.ml5 {
+    margin-left: 5px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.p10 {
+    padding: 10px;
+}
+.no-mb {
+    margin-bottom: 0;
+}
+.no-padding {
+    padding: 0 0;
+}
+.no-margin {
+    margin: 0 0;
+}

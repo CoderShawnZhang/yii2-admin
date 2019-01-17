@@ -14,13 +14,13 @@ use yii\helpers\Html;
 
 class SingleWidgets
 {
-    public static function select2($data = [],$options = [],$val = '')
+    public static function select2($data = [],$name = '',$options = [],$val = '')
     {
         $options = isset($options['options']) ? $options['options'] : [];
         $multiple = isset($options['options']['multiple']) ? $options['options']['multiple'] : true;
         return Select2::widget([
             'data' => $data,
-            'name' => 'sub_process[user_id][0][]',
+            'name' => $name,
             'value' => $val,
             'options' => ArrayHelper::merge(
                 [
