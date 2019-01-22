@@ -4,7 +4,7 @@ $this->registerJs($this->render('js/_index_script.js'));
 ?>
 <?php $this->beginBlock('content-header'); ?>
 <h1>
-    标签管理
+    定金管理
 </h1>
 <?php $this->endBlock(); ?>
 <div class="box box-solid no-mb"><!--白色底-->
