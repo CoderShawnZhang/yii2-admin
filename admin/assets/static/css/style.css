@@ -406,3 +406,7 @@ a {
 .no-margin {
     margin: 0 0;
 }
+
+.box-header p{
+    font-size:12px;
+}

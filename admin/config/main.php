@@ -24,6 +24,9 @@ return [
         'System' => [
             'class' => 'admin\Modules\System\Module',
         ],
+        'Price' => [
+            'class' => 'admin\Modules\Price\Module',
+        ],
         'gridview' => [
             'class' => '\kartik\grid\Module',
         ]

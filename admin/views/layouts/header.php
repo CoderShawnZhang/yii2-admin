@@ -8,7 +8,7 @@ use yii\helpers\Html;
 <header class="main-header">
 
    <a class="logo">
-        <span class="logo-mini"><img src="<?= $directoryAsset->baseUrl ?>/img/logo-32px.png"/></span>
+        <span class="logo-mini"><img src="<?= $directoryAsset->baseUrl ?>/img/logo-32px.png" style="width: 32px;"/></span>
         <span class="logo-lg"><b>后台管理系统</b></span>
     </a>
     <nav class="navbar navbar-static-top" role="navigation">
