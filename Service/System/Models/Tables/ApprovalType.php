@@ -1,6 +1,6 @@
 <?php
 
-namespace Service\System\Tables;
+namespace Service\System\Models\Tables;
 
 use Service\Base\ActiveRecord;
 use Yii;

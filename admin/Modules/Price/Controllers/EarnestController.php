@@ -7,6 +7,8 @@
  */
 namespace admin\Modules\Price\Controllers;
 
+use Service\Price\EarnestPrice as EarnestPriceService;
+
 class EarnestController extends \admin\controllers\BaseController
 {
     public function init()
@@ -22,6 +24,8 @@ class EarnestController extends \admin\controllers\BaseController
 
     public function actionList()
     {
-        return $this->renderAjax('list');
+        $searchModal = EarnestPriceService::earnest()->searchModal();
+        $dataProvider = $searchModal->dataProvider();
+        return $this->renderAjax('list',['dataProvider' => $dataProvider]);
     }
 }

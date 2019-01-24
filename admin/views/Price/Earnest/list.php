@@ -1,6 +1,7 @@
 <?php
-use Service\System\Tag as TagService;
-$columns = TagService::tagColumns();
+use Service\Price\EarnestPrice as EarnestPriceService;
+
+$columns = EarnestPriceService::earnest()->Columns();
 $item = [
     'tableOptions' => ['class' => 'table table-striped table-bordered table-fixed table-index-list'],
     'dataProvider' => $dataProvider,

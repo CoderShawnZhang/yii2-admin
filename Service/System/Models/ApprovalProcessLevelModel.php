@@ -5,7 +5,7 @@
 namespace Service\System\Models;
 
 use Service\Base\Exception;
-use Service\System\Tables\ApprovalProcessLevel;
+use Service\System\Models\Tables\ApprovalProcessLevel;
 
 class ApprovalProcessLevelModel extends ApprovalProcessLevel
 {

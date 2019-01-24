@@ -5,7 +5,7 @@
 
 namespace Service\System\Models;
 
-use Service\System\Tables\ApprovalProcess;
+use Service\System\Models\Tables\ApprovalProcess;
 use Service\System\Querys\ApprovalProcessQuery;
 use yii\db\Exception;
 

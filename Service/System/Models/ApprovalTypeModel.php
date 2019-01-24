@@ -6,7 +6,7 @@
 namespace Service\System\Models;
 
 use Service\System\Querys\ApprovalTypeQuery;
-use Service\System\Tables\ApprovalType;
+use Service\System\Models\Tables\ApprovalType;
 
 class ApprovalTypeModel extends ApprovalType
 {

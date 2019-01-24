@@ -9,7 +9,7 @@ namespace Service\System\Models;
 
 use Service\Base\Exception;
 use Service\System\Models\Search\TagSearch;
-use Service\System\Tables\Tags;
+use Service\System\Models\Tables\Tags;
 use yii\helpers\ArrayHelper;
 
 /**

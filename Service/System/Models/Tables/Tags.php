@@ -6,7 +6,7 @@
  * Time: 上午10:49
  */
 
-namespace Service\System\Tables;
+namespace Service\System\Models\Tables;
 
 use Service\Base\ActiveRecord;
 
