@@ -24,6 +24,9 @@ return [
         'System' => [
             'class' => 'admin\Modules\System\Module',
         ],
+        'Excel' => [
+            'class' => 'admin\Modules\Excel\Module',
+        ],
         'Price' => [
             'class' => 'admin\Modules\Price\Module',
         ],
@@ -45,7 +48,7 @@ return [
         ],
         'session' => [
             // this is the name of the session cookie used for login on the backend
-            'name' => 'advanced-backend',
+            'name' => 'YII2-Admin-Session',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

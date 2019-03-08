@@ -6,7 +6,7 @@
 namespace Service\Base;
 
 
-class Model extends \yii\base\Model
+class Model extends \yii\base\Model implements IModel
 {
     const PAGE_SIZE = 50;
     /**
@@ -19,5 +19,9 @@ class Model extends \yii\base\Model
             $errors[] = implode(' ',$error);
         }
         return implode(' ',$errors);
+    }
+    public function setCondition()
+    {
+        return [];
     }
 }

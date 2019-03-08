@@ -6,11 +6,13 @@ use admin\Modules\Index\models\SearchOrder;
 use admin\Modules\Index\models\createForm;
 use yii\web\Response;
 use Yii;
+use yii\web\Session;
 
 class IndexController extends BaseController
 {
     public function actionDesktop()
     {
+        $_SESSION['AA'] = 9999;
         $searchModel = new SearchOrder();
         $searchModel1= new createForm();
         $searchModel->load(\Yii::$app->request->get());

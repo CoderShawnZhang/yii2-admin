@@ -21,11 +21,11 @@ $fieldOptions2 = [
         <?= $form
             ->field($model, 'username', $fieldOptions1)
             ->label(false)
-            ->textInput(['placeholder' => '用户名','value' => '13189221217']) ?>
+            ->textInput(['placeholder' => '用户名','value' => isset($_COOKIE['username']) ? $_COOKIE['username'] : '']) ?>
         <?= $form
             ->field($model, 'password', $fieldOptions2)
             ->label(false)
-            ->passwordInput(['placeholder' => '密码','value' => '111111']) ?>
+            ->passwordInput(['placeholder' => '密码','value' => isset($_COOKIE['password']) ? $_COOKIE['password'] : '']) ?>
         <div class="row">
             <div class="col-xs-8"></div>
             <!-- /.col -->

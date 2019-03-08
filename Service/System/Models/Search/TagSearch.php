@@ -38,8 +38,7 @@ class TagSearch extends SearchModel
 
     public function setCondition()
     {
-        $query = TagModel::find()
-            ->andFilterWhere(['like','name',$this->name]);
+        $query = TagModel::find()->andFilterWhere(['like','name',$this->name]);
         $this->query = $query;
         return $this;
     }

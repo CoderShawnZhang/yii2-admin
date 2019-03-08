@@ -20,6 +20,7 @@ class LoginController extends \yii\web\Controller
 
     public function actionLogin()
     {
+        $_SESSION['RM'] = 1;
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -31,6 +32,14 @@ class LoginController extends \yii\web\Controller
                 Yii::$app->session->setFlash('error', '账号被锁定, 请联系店长解锁账号.');
             }
             return $this->refresh();
+        }
+        //记住密码
+        if($_SESSION['RM'] == 1){
+            setcookie('username',Yii::$app->request->post('username','13189221217'),time()+3600*24);
+            setcookie('password',Yii::$app->request->post('password','111111'),time()+3600*24);
+        } else {
+            setcookie('username','',time()+20);
+            setcookie('password','',time()+20);
         }
         return $this->render('login', [
             'model' => $model,

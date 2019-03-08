@@ -25,4 +25,9 @@ class BaseController extends Controller
             $this->redirect(['Index/index/desktop']);
         }
     }
+
+    public function actionImport()
+    {
+
+    }
 }
