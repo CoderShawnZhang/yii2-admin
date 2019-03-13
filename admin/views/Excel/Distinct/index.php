@@ -19,40 +19,6 @@ $this->registerJs($this->render('js/_index_script.js'));
     <li class="active"><?= $this->title ?></li>
 </ol>
 <?php $this->endBlock(); ?>
-<style>
-    .priceInput-file {
-        position: relative;
-        width: 112px;
-        background-color: #fff;
-        font-weight: 600;
-        border: 1px solid #8f8cd6;
-        padding: 6px 12px;
-        margin-left: 10px;
-        color: #8f8cd6;
-        border-radius: 4px;
-        text-align: center;
-        cursor: pointer;
-    }
-    .priceInput-file #myFile {
-        background-color: transparent;
-        border-radius: 0px;
-        border: medium none;
-        opacity: 0;
-        filler: alpha(opacity=0);
-        cursor: pointer;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
-    .closeTab{
-        position: absolute;
-        top: 2px;
-        right: 10px;
-        z-index: 99;
-        cursor: pointer;
-        display: none;
-    }
-</style>
 <div class="rules-explain-box">
     <form id="importForm" method="post" enctype="multipart/form-data" action="/Excel/distinct/import">
         <div class="price-file-box clearfix">
@@ -68,7 +34,7 @@ $this->registerJs($this->render('js/_index_script.js'));
     <ul class="nav nav-tabs" id="navTabs">
         <?php foreach($tabList as $key => $val){ ?>
             <li>
-                <span class="closeTab">x</span>
+                <span class="closeTab" data-tabId = "<?=$val['exportTime']?>">x</span>
                 <a href="<?= \yii\helpers\Url::toRoute(\yii\helpers\ArrayHelper::merge(['list', 'pichNo' => $val['exportTime']],Yii::$app->request->get()))?>" data-target="#tab_<?=$key;?>">&nbsp;&nbsp;&nbsp;<?=$val['tabName']?>&nbsp;&nbsp;&nbsp;</a>
             </li>
         <?php } ?>

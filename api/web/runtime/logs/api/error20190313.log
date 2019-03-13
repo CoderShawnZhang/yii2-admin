@@ -1,0 +1,430 @@
+2019-03-13 15:25:47 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'api\Modules\v1\Module' in file: /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/Module.php. Namespace missing? in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\Modules\\v1\\...')
+#1 [internal function]: spl_autoload_call('api\\Modules\\v1\\...')
+#2 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(431): ReflectionClass->__construct('api\\Modules\\v1\\...')
+#3 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(365): yii\di\Container->getDependencies('api\\Modules\\v1\\...')
+#4 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('api\\Modules\\v1\\...', Array, Array)
+#5 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('api\\Modules\\v1\\...', Array, Array)
+#6 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#7 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('v1')
+#8 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#9 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#10 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#11 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#12 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(18): yii\base\Application->__construct(Array)
+#13 {main}
+2019-03-13 15:25:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'XDEBUG_SESSION_START' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '1'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,la;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64561'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/?XDEBUG_SESSION_START=1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'XDEBUG_SESSION_START=1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552461942.3891
+    'REQUEST_TIME' => 1552461942
+]
+2019-03-13 15:26:12 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] ReflectionException: Class api\Modules\v2\Module does not exist in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php:431
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(431): ReflectionClass->__construct('api\\Modules\\v2\\...')
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(365): yii\di\Container->getDependencies('api\\Modules\\v2\\...')
+#2 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('api\\Modules\\v2\\...', Array, Array)
+#3 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('api\\Modules\\v2\\...', Array, Array)
+#4 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#5 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('v2')
+#6 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#7 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#8 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#9 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#10 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(18): yii\base\Application->__construct('[<span class="s...')
+#11 {main}
+
+Next yii\base\InvalidConfigException: Failed to instantiate component or class "api\Modules\v2\Module". in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php:433
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(365): yii\di\Container->getDependencies('api\\Modules\\v2\\...')
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('api\\Modules\\v2\\...', Array, Array)
+#2 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('api\\Modules\\v2\\...', Array, Array)
+#3 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#4 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('v2')
+#5 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#6 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#7 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#8 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#9 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(18): yii\base\Application->__construct('[<span class="s...')
+#10 {main}
+2019-03-13 15:26:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'XDEBUG_SESSION_START' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '1'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,la;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64561'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/?XDEBUG_SESSION_START=1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'XDEBUG_SESSION_START=1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552461972.5791
+    'REQUEST_TIME' => 1552461972
+]
+2019-03-13 15:27:22 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: 页面未找到。 in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Request.php:284
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(82): yii\web\Request->resolve()
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#3 {main}
+2019-03-13 15:27:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'XDEBUG_SESSION_START' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '1'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,la;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64561'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/?XDEBUG_SESSION_START=1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'XDEBUG_SESSION_START=1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552462042.2976
+    'REQUEST_TIME' => 1552462042
+]
+2019-03-13 15:27:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/index/index". in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/index/index', Array)
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#2 {main}
+2019-03-13 15:27:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'XDEBUG_SESSION_START' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '1'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,la;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64561'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/index?XDEBUG_SESSION_START=1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'XDEBUG_SESSION_START=1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552462066.2114
+    'REQUEST_TIME' => 1552462066
+]
+2019-03-13 15:27:56 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/index/index". in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/index/index', Array)
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#2 {main}
+2019-03-13 15:27:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'XDEBUG_SESSION_START' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '1'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,la;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '64561'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/index?XDEBUG_SESSION_START=1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'XDEBUG_SESSION_START=1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552462076.4644
+    'REQUEST_TIME' => 1552462076
+]
+2019-03-13 15:28:26 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/index/index". in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/index/index', Array)
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#2 {main}
+2019-03-13 15:28:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'XDEBUG_SESSION_START' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.4.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_POSTMAN_TOKEN' => '0aed3819-6762-4cd9-951f-54fc58e53142'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51072'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/index?XDEBUG_SESSION_START=1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'XDEBUG_SESSION_START=1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552462105.8637
+    'REQUEST_TIME' => 1552462105
+]
+2019-03-13 15:32:23 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/index/index". in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/index/index', Array)
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#2 {main}
+2019-03-13 15:32:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'XDEBUG_SESSION_START' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XDEBUG_SESSION' => '1'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_COOKIE' => 'XDEBUG_SESSION=1'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9,en;q=0.8,la;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52956'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/index?XDEBUG_SESSION_START=1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'XDEBUG_SESSION_START=1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552462343.6496
+    'REQUEST_TIME' => 1552462343
+]

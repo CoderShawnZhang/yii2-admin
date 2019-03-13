@@ -1,4 +1,6 @@
-
+<div class="rules-explain-box">
+    sfsfsdss
+</div>
 <div class="box box-solid no-mb" >
     <?php
     $columns = \Service\Excel\models\Search\Columns\distinctColumns::getColumns($searchModel);

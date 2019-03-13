@@ -7,10 +7,11 @@
  */
 namespace admin\Modules\Excel\Controllers;
 
+use Anlewo\ApiView\MyPake;
 use common\Excel\ExcelManager;
 use admin\controllers\BaseController;
 use Service\Excel\Excel;
-use yii\helpers\ArrayHelper;
+use yii\web\Response;
 
 class DistinctController extends BaseController
 {
@@ -24,6 +25,9 @@ class DistinctController extends BaseController
 
     public function actionIndex()
     {
+        $myPack = new MyPake();
+        echo $myPack->say();
+        echo __DIR__.'/apiConfig.php';
         $tabList = Excel::distinct()->getTabList();
 
         return $this->render('index',['tabList' => $tabList,'tabActive' => count($tabList)-1]);
@@ -38,6 +42,23 @@ class DistinctController extends BaseController
 
         $tabList = Excel::distinct()->getTabList();
         return $this->renderAjax('import_list',['searchModel' => $searchModel,'dataProvider'=>$dataProvider,'tabList' => $tabList]);
+    }
+
+    public function actionDelete()
+    {
+        $request = \Yii::$app->request;
+        \Yii::$app->response->format = Response::FORMAT_JSON;
+        echo ['success' => true,'message' => ''];
+        $tabId = $request->post('tabId');
+        if($request->isPost){
+            $condition['importTime'] = $tabId;
+            $res = Excel::distinct()->deleteTab($condition);
+            if($res > 0){
+                echo ['success' => true,'message' => ''];
+            } else {
+                echo ['success' => false,'message' => '删除失败！'];
+            }
+        }
     }
 
     /**
@@ -67,15 +88,13 @@ class DistinctController extends BaseController
     {
         $request = \Yii::$app->request;
         $isRequestPichNo = $request->get('pichNo');
-        $pichNo = isset($isRequestPichNo) ? $isRequestPichNo : '1551860511';
-        $list = $this->getExportList($pichNo);
-        ExcelManager::runExport($list);
+        $pichNo = isset($isRequestPichNo) ? $isRequestPichNo : '';
+        if(!empty($pichNo)){
+            $list = $this->getExportList($pichNo);
+            ExcelManager::runExport($list);
+        }
     }
 
-    public function getImportData($fileName,$condition = [])
-    {
-
-    }
 
     /**
      * private

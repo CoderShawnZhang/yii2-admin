@@ -27,4 +27,9 @@ class DistinctModule
     {
         return ExcelTabModel::getList($condition);
     }
+
+    public function deleteTab($condition = [])
+    {
+        return ExcelTabModel::deleteTab($condition);
+    }
 }

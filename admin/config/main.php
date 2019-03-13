@@ -32,6 +32,10 @@ return [
         ],
         'gridview' => [
             'class' => '\kartik\grid\Module',
+        ],
+        'ApiView' => [
+            'class' => 'Anlewo\ApiView\Module',
+            'apiConfig' =>  require __DIR__.'/apiConfig.php',
         ]
     ],
     "aliases" => [

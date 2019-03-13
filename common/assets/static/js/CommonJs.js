@@ -56,7 +56,7 @@
             .success(opts.success)
             .fail(opts.error)
             .always(opts.complete)
-    }
+    };
 
     $.GET=function(url,callback){
         return $.AJAX({
@@ -64,5 +64,14 @@
             success:callback,
             type:"GET"
         });
-    }
+    };
+
+    $.POST=function(url,data,callback){
+        return $.AJAX({
+            url:url,
+            data:data,
+            type:"POST",
+            success:callback
+        });
+    };
 })($);

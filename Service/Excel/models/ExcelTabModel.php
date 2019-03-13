@@ -17,4 +17,9 @@ class ExcelTabModel extends ExcelTab
     {
         return self::find()->andFilterWhere($condition)->all();
     }
+
+    public static function deleteTab($condition = [])
+    {
+        return self::deleteAll($condition);
+    }
 }

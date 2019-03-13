@@ -28,9 +28,14 @@ $('#navTabs').on('show.bs.tab',function(e){
         $(e.target).attr('href','#');
     }
 });
+
 $('.closeTab').on('click',function(){
-   alert(123);
+    var tabId = $(this).data('tabId');
+    $.AJAX({url:'delete',data:{'tabId':tabId},type:"POST",success:function (res) {
+        console.log(res);
+   }});
 });
+
 function getListHtml(url,selector) {
     $.GET(url,function(res){
         $(selector).html(res);
