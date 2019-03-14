@@ -5,7 +5,7 @@
  * Date: 2019/3/13
  * Time: 下午2:24
  */
-namespace admin\api\common\controllers;
+namespace api\common\controllers;
 
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBearerAuth;

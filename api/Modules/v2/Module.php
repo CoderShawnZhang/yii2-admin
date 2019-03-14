@@ -11,7 +11,7 @@ use yii\base\BootstrapInterface;
 
 class Module extends \yii\base\Module implements BootstrapInterface
 {
-    public $controllerNamespace = 'admin\api\Modules\v2\controllers';
+    public $controllerNamespace = 'api\Modules\v2\controllers';
 
     public function init()
     {

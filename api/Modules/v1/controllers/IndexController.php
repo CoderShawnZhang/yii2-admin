@@ -5,11 +5,14 @@
  * Date: 2019/3/13
  * Time: 下午2:24
  */
+namespace api\Modules\v1\controllers;
 
-class IndexController extends \admin\api\common\controllers\BaseController
+class IndexController extends \api\common\controllers\BaseController
 {
+    public $modelClass = 'api\Modules\v1\models\IndexModels';
+
     public function actionIndex()
     {
-        var_dump(123);die;
+       return 123;
     }
 }

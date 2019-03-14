@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'api',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'api\common\controllers',
+    'controllerNamespace' => 'api\Controllers',
     'bootstrap' => ['log','v1','v2'],
     'modules' => [
         'v1' => [
@@ -45,7 +45,7 @@ return [
             ],
         ],
         'user' => [
-            'identityClass' => 'api\common\models\User',
+            'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'enableSession' => false,
             'loginUrl' => null,
