@@ -17,6 +17,10 @@ return [
         ],
         'v2' => [
             'class' => 'api\Modules\v2\Module',
+        ],
+        'ApiView' => [
+            'class' => 'Anlewo\ApiView\Module',
+            'apiConfig' =>  require __DIR__.'/apiConfig.php',
         ]
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',

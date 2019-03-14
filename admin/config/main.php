@@ -35,7 +35,8 @@ return [
         ],
         'ApiView' => [
             'class' => 'Anlewo\ApiView\Module',
-            'apiConfig' =>  require __DIR__.'/apiConfig.php',
+            'apiConfig' =>  require __DIR__.'/../../api/config/apiConfig.php',
+            'apiHost' => 'http://yii2api.local.alwooo.com',
         ]
     ],
     "aliases" => [

@@ -344,3 +344,64 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1552527203.1692
     'REQUEST_TIME' => 1552527203
 ]
+2019-03-14 16:17:35 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-14 16:17:35 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-14 16:17:35 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-14 16:17:35 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab1') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-14 16:17:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50898'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v2/index/index?access-token=02818451399b5cde5f3c05bd00e72aab1'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab1'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552551455.4825
+    'REQUEST_TIME' => 1552551455
+]
