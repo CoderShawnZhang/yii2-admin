@@ -55,12 +55,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CoderShawnZhang/apiview.git",
-                "reference": "9a3a2aa3e657cef1bff1bdc84dc0b5187fe7336f"
+                "reference": "d1e7e7898c0402c5a9cc4632648f35e7cfed0a9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CoderShawnZhang/apiview/zipball/9a3a2aa3e657cef1bff1bdc84dc0b5187fe7336f",
-                "reference": "9a3a2aa3e657cef1bff1bdc84dc0b5187fe7336f",
+                "url": "https://api.github.com/repos/CoderShawnZhang/apiview/zipball/d1e7e7898c0402c5a9cc4632648f35e7cfed0a9f",
+                "reference": "d1e7e7898c0402c5a9cc4632648f35e7cfed0a9f",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "b",
                 "c"
             ],
-            "time": "2019-03-14T06:30:04+00:00"
+            "time": "2019-03-15T06:59:25+00:00"
         },
         {
             "name": "bower-asset/bootstrap",

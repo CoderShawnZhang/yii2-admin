@@ -12,9 +12,11 @@ use api\common\controllers\BaseController;
 
 class IndexController extends BaseController
 {
-    public function actionIndexa()
+    public function actionIndexa1()
     {
-       return User::findOne(['id'=>1]);
+        echo \Yii::getAlias('@api/runtime');die;
+        echo \Yii::getAlias('runtime');die;
+       return User::findOn1e(['id'=>1]);
     }
 
     public function actionIndexb()

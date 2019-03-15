@@ -1,0 +1,60 @@
+2019-03-15 15:57:14 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/index/indexa in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('indexa', Array)
+#1 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('v1/index/indexa', Array)
+#2 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: 页面未找到。 in /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /Users/zhanghongbo/develop/yii2-admin/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Users/zhanghongbo/develop/yii2-admin/api/web/index.php(19): yii\base\Application->run()
+#2 {main}
+2019-03-15 15:57:14 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-api' => 'e10c5d8727d5feeb9ea68b0cf03304e595fd1a1ea7d307af8e38e302aba06100a:2:{i:0;s:9:\"_csrf-api\";i:1;s:32:\"LcUMXhurJU9j_7PNbCmIpPnBjTEfl0g5\";}'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf-api=e10c5d8727d5feeb9ea68b0cf03304e595fd1a1ea7d307af8e38e302aba06100a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_csrf-api%22%3Bi%3A1%3Bs%3A32%3A%22LcUMXhurJU9j_7PNbCmIpPnBjTEfl0g5%22%3B%7D'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.4.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_POSTMAN_TOKEN' => 'fea125d0-72a6-4360-bc24-b669e72ab05f'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52389'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '0'
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552636634.4032
+    'REQUEST_TIME' => 1552636634
+]

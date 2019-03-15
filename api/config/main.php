@@ -29,19 +29,19 @@ return [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
                 'error_file' => [
-                    'logFile' => 'runtime/logs/api/error' . date('Ymd') . '.log',
+                    'logFile' => '@runtime/api/error' . date('Ymd') . '.log',
                     'class' => 'yii\log\FileTarget',
                     'maxLogFiles' => 500,
                     'levels' => ['error'],
                 ],
                 'warning_file' => [
-                    'logFile' => 'runtime/logs/api/warning' . date('Ymd') . '.log',
+                    'logFile' => '@runtime/api/warning' . date('Ymd') . '.log',
                     'class' => 'yii\log\FileTarget',
                     'maxLogFiles' => 500,
                     'levels' => ['warning'],
                 ],
                 'info_file' => [
-                    'logFile' => 'runtime/logs/api/info' . date('Ymd') . '.log',
+                    'logFile' => '@runtime/api/info' . date('Ymd') . '.log',
                     'class' => 'yii\log\FileTarget',
                     'maxLogFiles' => 500,
                     'levels' => ['info'],
