@@ -8,14 +8,14 @@
             'main' => [
                 'groupName' => '测试1',
                 'methods' => [
-                    'index'=>['url'=>'/index/index','params'=>[
+                    'indexa'=>['url'=>'/index/indexa','params'=>[
                             'access-token'=>['type'=>'int','value'=>'02818451399b5cde5f3c05bd00e72aab','description'=>'用户认证令牌access-token'],
                         ],
-                        'apiDescription'=>'获取用户基本信息','verbs'=>'GET'
+                        'apiDescription'=>'获取用户基本信息','verbs'=>'POST'
                     ],
-                    'getUserName1'=>['url'=>'www.baidu.com','params'=>[],'apiDescription'=>'测试','verbs'=>'post'],
-                    'getUserName2'=>['url'=>'www.baidu.com','params'=>[],'apiDescription'=>'测试','verbs'=>'post'],
-                    'getUserName3'=>['url'=>'www.baidu.com','params'=>[],'apiDescription'=>'测试','verbs'=>'post'],
+                    'indexb'=>['url'=>'/index/indexb','params'=>[
+                            'access-token'=>['value'=>'02818451399b5cde5f3c05bd00e72aab','type'=>'int','description'=>'用户认证令牌access-token'],
+                    ],'apiDescription'=>'测试','verbs'=>'GET'],
                 ]
             ],
             'fruitrue' => [

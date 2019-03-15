@@ -18,6 +18,8 @@ class BaseController extends ActiveController
 {
     public $enableCsrfValidation = false;
 
+    public $modelClass = 'api\Modules\v1\models\IndexModels';
+
     public function behaviors()
     {
         return ArrayHelper::merge(parent::behaviors(),[

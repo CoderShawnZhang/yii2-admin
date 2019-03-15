@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: zhanghongbo
- * Date: 2019/3/13
- * Time: 上午11:38
+ * v2模块类
  */
 namespace api\Modules\v2;
 

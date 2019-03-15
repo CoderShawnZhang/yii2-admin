@@ -12,10 +12,13 @@ use api\common\controllers\BaseController;
 
 class IndexController extends BaseController
 {
-    public $modelClass = 'api\Modules\v1\models\IndexModels';
-
-    public function actionIndex()
+    public function actionIndexa()
     {
        return User::findOne(['id'=>1]);
+    }
+
+    public function actionIndexb()
+    {
+        return ['a'=>123];
     }
 }
