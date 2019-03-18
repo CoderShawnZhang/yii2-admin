@@ -1,0 +1,3001 @@
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 15:59:01 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-api' => 'e10c5d8727d5feeb9ea68b0cf03304e595fd1a1ea7d307af8e38e302aba06100a:2:{i:0;s:9:\"_csrf-api\";i:1;s:32:\"LcUMXhurJU9j_7PNbCmIpPnBjTEfl0g5\";}'
+]
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf-api=e10c5d8727d5feeb9ea68b0cf03304e595fd1a1ea7d307af8e38e302aba06100a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_csrf-api%22%3Bi%3A1%3Bs%3A32%3A%22LcUMXhurJU9j_7PNbCmIpPnBjTEfl0g5%22%3B%7D'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.4.0'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_POSTMAN_TOKEN' => 'e7613747-8359-4958-b1f8-4b831ad6f05f'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52389'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '0'
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552636741.3257
+    'REQUEST_TIME' => 1552636741
+]
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 15:59:25 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52650'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552636765.0323
+    'REQUEST_TIME' => 1552636765
+]
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:06:52 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52906'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637212.2402
+    'REQUEST_TIME' => 1552637212
+]
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:03 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52910'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637223.1762
+    'REQUEST_TIME' => 1552637223
+]
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52913'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637225.0417
+    'REQUEST_TIME' => 1552637225
+]
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52916'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637225.695
+    'REQUEST_TIME' => 1552637225
+]
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:05 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52919'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637225.8517
+    'REQUEST_TIME' => 1552637225
+]
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:06 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52922'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637226.0237
+    'REQUEST_TIME' => 1552637226
+]
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:13 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52944'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637233.4904
+    'REQUEST_TIME' => 1552637233
+]
+2019-03-15 16:07:24 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:24 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:24 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:24 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:24 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:24 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:24 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:23 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52947'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637243.977
+    'REQUEST_TIME' => 1552637243
+]
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:25 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52950'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637245.3175
+    'REQUEST_TIME' => 1552637245
+]
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:32 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    '{\"access-token\":\"02818451399b5cde5f3c05bd00e72aab\"}' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_LENGTH' => '51'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52953'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '51'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637252.4899
+    'REQUEST_TIME' => 1552637252
+]
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:49 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------0473415852ac0edf'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52958'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------0473415852ac0edf'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637269.636
+    'REQUEST_TIME' => 1552637269
+]
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:07:50 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------f4c4f61097829385'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52961'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------f4c4f61097829385'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637270.5776
+    'REQUEST_TIME' => 1552637270
+]
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:05 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------9d2629e8add80604'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52984'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------9d2629e8add80604'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637285.0956
+    'REQUEST_TIME' => 1552637285
+]
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------8e55dc707ee492d4'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52987'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------8e55dc707ee492d4'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637286.0123
+    'REQUEST_TIME' => 1552637286
+]
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:06 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------29b0e8121d2214a8'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52990'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------29b0e8121d2214a8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637286.2584
+    'REQUEST_TIME' => 1552637286
+]
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:11 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------99df4ff8d3083404'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52993'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------99df4ff8d3083404'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637291.7482
+    'REQUEST_TIME' => 1552637291
+]
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:21 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------c1a0632ed5cec632'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52996'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------c1a0632ed5cec632'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637301.0803
+    'REQUEST_TIME' => 1552637301
+]
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------a104ccce4782a23f'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52999'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------a104ccce4782a23f'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637311.1693
+    'REQUEST_TIME' => 1552637311
+]
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:31 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------b4e8f6366c4cf496'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53002'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------b4e8f6366c4cf496'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637311.9355
+    'REQUEST_TIME' => 1552637311
+]
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:08:43 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------f5378180f236a5b2'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53007'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------f5378180f236a5b2'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637323.6463
+    'REQUEST_TIME' => 1552637323
+]
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:09:08 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------6858cb964747543a'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53011'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------6858cb964747543a'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637348.3872
+    'REQUEST_TIME' => 1552637348
+]
+2019-03-15 16:09:48 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:48 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:48 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:48 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:09:48 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:09:48 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:09:48 [127.0.0.1][1][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53109'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexb?access-token=02818451399b5cde5f3c05bd00e72aab'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637388.5518
+    'REQUEST_TIME' => 1552637388
+]
+2019-03-15 16:11:43 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:43 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:43 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:43 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:43 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:11:43 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:11:43 [127.0.0.1][1][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53128'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexb?access-token=02818451399b5cde5f3c05bd00e72aab'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637503.249
+    'REQUEST_TIME' => 1552637503
+]
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:11:51 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------36df59c9bc85b4c5'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7e50eaf7-b0f0-4217-ac6e-426f3f056035'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53147'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------36df59c9bc85b4c5'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552637511.2897
+    'REQUEST_TIME' => 1552637511
+]
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:43:13 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------144225bff6ea070d'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53817'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------144225bff6ea070d'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639393.3565
+    'REQUEST_TIME' => 1552639393
+]
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:43:14 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------247240f47cc2a4a8'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53821'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------247240f47cc2a4a8'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639394.4031
+    'REQUEST_TIME' => 1552639394
+]
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:43:29 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------75f98a4954ea2016'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53825'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------75f98a4954ea2016'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639409.782
+    'REQUEST_TIME' => 1552639409
+]
+2019-03-15 16:43:37 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:37 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:37 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:37 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:43:37 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:43:37 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:43:37 [127.0.0.1][1][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53848'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexb?access-token=02818451399b5cde5f3c05bd00e72aab'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639417.2527
+    'REQUEST_TIME' => 1552639417
+]
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53858'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexb?access-token=02818451399b5cde5f3c05bd00e72aab'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639468.1535
+    'REQUEST_TIME' => 1552639468
+]
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:44:28 [127.0.0.1][1][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53862'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexb?access-token=02818451399b5cde5f3c05bd00e72aab'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639468.865
+    'REQUEST_TIME' => 1552639468
+]
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53867'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexb?access-token=02818451399b5cde5f3c05bd00e72aab'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639469.1614
+    'REQUEST_TIME' => 1552639469
+]
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:44:29 [127.0.0.1][1][-][info][application] $_GET = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53871'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexb?access-token=02818451399b5cde5f3c05bd00e72aab'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'access-token=02818451399b5cde5f3c05bd00e72aab'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639469.4114
+    'REQUEST_TIME' => 1552639469
+]
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:44:39 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------1d9db423b0a38603'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53897'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------1d9db423b0a38603'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639479.7472
+    'REQUEST_TIME' => 1552639479
+]
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 16:45:37 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------828667a6ae04f100'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '53906'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------828667a6ae04f100'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552639537.0467
+    'REQUEST_TIME' => 1552639537
+]
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 17:23:24 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------af0b9670eff18375'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55211'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------af0b9670eff18375'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552641804.8723
+    'REQUEST_TIME' => 1552641804
+]
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------b2cf020f2bf72f3b'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55214'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------b2cf020f2bf72f3b'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552641805.5281
+    'REQUEST_TIME' => 1552641805
+]
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------0b39b29bdb3fa3b1'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55218'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------0b39b29bdb3fa3b1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552641805.7296
+    'REQUEST_TIME' => 1552641805
+]
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 17:23:25 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------e33b9482b469682e'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55221'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------e33b9482b469682e'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552641805.8875
+    'REQUEST_TIME' => 1552641805
+]
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------97b5085a714d426e'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55224'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------97b5085a714d426e'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552641806.0433
+    'REQUEST_TIME' => 1552641806
+]
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------fdbfd4586a9ca6bc'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55227'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------fdbfd4586a9ca6bc'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552641806.2001
+    'REQUEST_TIME' => 1552641806
+]
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=yii_admin;port=3306
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'user' AND kcu.table_name = 'user'
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE (`access_token`='02818451399b5cde5f3c05bd00e72aab') AND (`status`=10)
+    in /Users/zhanghongbo/develop/yii2-admin/common/models/User.php:72
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\web\User::login] User '1' logged in from 127.0.0.1. Session not enabled.
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in /Users/zhanghongbo/develop/yii2-admin/api/Modules/v1/controllers/IndexController.php:17
+2019-03-15 17:23:26 [127.0.0.1][1][-][info][application] $_GET = []
+
+$_POST = [
+    'access-token' => '02818451399b5cde5f3c05bd00e72aab'
+]
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'zhanghongbo'
+    'HOME' => '/Users/zhanghongbo'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------458064c13fb280d5'
+    'HTTP_EXPECT' => '100-continue'
+    'HTTP_CONTENT_LENGTH' => '179'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_ACCEPT_ENCODING' => 'deflate, gzip'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_HOST' => 'yii2api.local.alwooo.com'
+    'SCRIPT_FILENAME' => '/Users/zhanghongbo/develop/yii2-admin/api/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'yii2api.local.alwooo.com'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55230'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.14.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Users/zhanghongbo/develop/yii2-admin/api/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/v1/index/indexa'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '179'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=------------------------458064c13fb280d5'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552641806.3581
+    'REQUEST_TIME' => 1552641806
+]
