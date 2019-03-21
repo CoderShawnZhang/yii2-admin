@@ -29,13 +29,11 @@ class IndexController extends BaseController
     public function actionList()
     {
         $searchModel = new SearchOrder();
-        $searchModel1= new createForm();
         $searchModel->load(\Yii::$app->request->get());
         $dataProvider = $searchModel->search();
         return $this->renderAjax('list',[
             'searchModel'=>$searchModel,
             'dataProvider' => $dataProvider,
-            'searchModel1'=>$searchModel1
         ]);
     }
 

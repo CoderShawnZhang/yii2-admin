@@ -25,9 +25,6 @@ class DistinctController extends BaseController
 
     public function actionIndex()
     {
-        $myPack = new MyPake();
-        echo $myPack->say();
-        echo __DIR__.'/apiConfig.php';
         $tabList = Excel::distinct()->getTabList();
 
         return $this->render('index',['tabList' => $tabList,'tabActive' => count($tabList)-1]);

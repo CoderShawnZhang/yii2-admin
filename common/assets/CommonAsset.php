@@ -12,7 +12,7 @@ class CommonAsset extends AssetBundle
     public $sourcePath = '@common/Assets/static';
     public $css = [];
     public $js = [
-        'js/test.js',
+        'js/request.js',
         'js/CommonJs.js',
         'js/modal-tip.js',
     ];

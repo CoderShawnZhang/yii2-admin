@@ -126,7 +126,7 @@
 
                 var $thisClone = $this.clone(true);
                 $thisClone.removeAttr('id');
-                $thisClone.html($thisClone.clone(true).find('tr:first'));
+                $thisClone.html($thisClone.clone(true).find('tr:first').parent('thead'));
                 $thisClone.appendTo(fixedDiv); //将表头添加到fixedDiv中
                 // $this.find("thead").remove(); //删除原节点
 

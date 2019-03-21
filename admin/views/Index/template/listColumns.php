@@ -19,19 +19,6 @@ class listColumns
                 },
             ],
             [
-                'class' => 'kartik\grid\ExpandRowColumn',
-                'width' => '30px',
-                'value' => function ($model, $key, $index, $column) {
-                    return GridView::ROW_COLLAPSED;
-                },
-                'detailUrl' => Url::to(['list-sub']),
-                'enableRowClick' => false,
-                'expandOneOnly' => true,
-                'allowBatchToggle' => false,
-                'expandIcon' => '<span class="waitOrder-Icon"></span>',
-                'collapseIcon' => '<span class="waitOrder-Icon waitOrder-openIcon"></span>'
-            ],
-            [
                 'attribute' => 'id',
                 'header'=>'用户编号',
                 'format' => 'raw',
