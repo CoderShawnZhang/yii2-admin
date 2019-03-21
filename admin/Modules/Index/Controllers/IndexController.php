@@ -38,14 +38,14 @@ class IndexController extends BaseController
     }
 
     public function actionListSub()
-    { 
+    {
         $searchModel = new SearchOrder();
         $dataProvider = $searchModel->search();
         return $this->renderAjax('template/list-sub',['searchModel'=>$searchModel,'dataProvider' => $dataProvider]);
     }
 
     public function actionEditName()
-    {
+    { 
         Yii::$app->response->format = Response::FORMAT_JSON;
         $data = Yii::$app->request->post();
         $attribute = Yii::$app->request->post('editableAttribute', '');
