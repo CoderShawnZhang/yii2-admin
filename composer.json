@@ -28,7 +28,8 @@
         "kartik-v/yii2-editable": "1.7.6",
         "light/yii2-ajaxform": "*",
         "phpoffice/phpexcel": "^1.8",
-        "anlewo/apiview": "dev-master"
+        "anlewo/apiview": "dev-master",
+        "anlewo/yii2-widget-tabgridview": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -46,7 +47,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
+            "url": "https://packagist.laravel-china.org"
         },
         {
             "type": "composer",

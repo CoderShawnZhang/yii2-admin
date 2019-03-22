@@ -17,8 +17,3 @@ var ajaxFormSuccess = function (response) {
 var ajaxFormError = function () {
   alert('ajaxFormError');
 };
-
-/**删除单条*/
-var actionDel = function(){
-
-}

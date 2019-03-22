@@ -13,7 +13,6 @@ class CommonAsset extends AssetBundle
     public $css = [];
     public $js = [
         'js/request.js',
-        'js/CommonJs.js',
         'js/modal-tip.js',
     ];
     public $depends = [

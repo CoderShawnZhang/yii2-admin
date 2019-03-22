@@ -37,6 +37,9 @@ return [
             'class' => 'Anlewo\ApiView\Module',
             'apiConfig' =>  require __DIR__.'/../../api/config/apiConfig.php',
             'apiHost' => 'http://yii2api.local.alwooo.com',
+        ],
+        'tabGridView' => [
+            'class' => 'anlewo\tabgridview\Module'
         ]
     ],
     "aliases" => [

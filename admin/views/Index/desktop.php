@@ -5,11 +5,7 @@ $opts = \yii\helpers\Json::htmlEncode([
    'defaultTab' => 0,
 ]);
 $asset = \admin\assets\AppAsset::register($this);
-$js = <<<JS
-var _opt = {$opts};
-JS;
-$this->registerJs($js);
-$this->registerJs($this->render('js/_index_script.js'));
+
 ?>
 <!--Header-->
 <?php $this->beginBlock('content-header'); ?>
@@ -27,17 +23,130 @@ $this->registerJs($this->render('js/_index_script.js'));
 <?php $this->endBlock(); ?>
 <!--Search-->
 <?php echo $this->render('search',['searchModel'=>$searchModel,'searchModel1'=>$searchModel1]); ?>
-<div class="box box-solid no-mb">
-    <ul class="nav nav-tabs" id="navTabs">
-        <?php foreach ($count as $key => $val): ?>
-            <li>
-                <a href="<?= Url::toRoute(ArrayHelper::merge(['list', 'tabId' => $key],Yii::$app->request->get()))?>" data-target="#tab_<?= $key ?>">待确认收款(<?=$key?>)</a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    <div class="tab-content">
-        <?php foreach ($stateList as $key => $val): ?>
-            <div class="tab-pane" id="tab_<?= $key ?>"></div>
-        <?php endforeach; ?>
-    </div>
-</div>
+
+<?php
+$columns = [
+    [
+        'class' => 'yii\grid\CheckboxColumn',
+        'headerOptions' => ['width' => '30'],
+        'name' => 'id',
+        'checkboxOptions' => function ($model, $key, $index, $column) {
+            return ['value' => $model->id];
+        },
+    ],
+    [
+        'attribute' => 'id',
+        'header'=>'用户编1号',
+        'format' => 'raw',
+        'headerOptions' => ['width' => '100'],
+        'value' => function($model){
+            return $model->id;
+        },
+        'filter' => \kartik\select2\Select2::widget([
+            'model' => $searchModel,
+            'attribute' =>'id',
+            'data' => [''=>'无',1=>1,2=>2,3=>3]
+        ])
+    ],
+    [
+        'attribute' => 'name',
+        'header' => '名称',
+        'headerOptions' => ['width' => '150'],
+        'value' => function($model){
+            return $model->name;
+        }
+    ],
+    [
+        'attribute' => 'name',
+        'header' => '加盟商',
+        'headerOptions' => ['width' => '180'],
+        'value' => function(){
+            return '广东惠州惠东县级店';
+        }
+    ],
+    [
+        'attribute' => 'name',
+        'header' => '加盟商',
+        'value' => function(){
+            return '广东惠州惠东县级店';
+        }
+    ],
+    [
+        'class' => 'kartik\grid\EditableColumn',
+        'attribute' => 'name',
+        'filter' => false,
+        'header' => '接单员备注',
+        'headerOptions' => ['class' => 'th-w200'],
+        'editableOptions' => [
+            'size' => 'md',
+            'inputType' => \kartik\editable\Editable::INPUT_TEXT,
+            'formOptions' => ['action' => 'edit-name'],
+            'placement' => \kartik\popover\PopoverX::ALIGN_BOTTOM_RIGHT,
+            'showButtonLabels' => true,
+            'submitButton' => [
+                'icon' => '<i class="fa fa-save"></i>',
+                'label' => '保存',
+                'class' => 'btn btn-sm btn-primary',
+            ],
+        ],
+    ],
+    [
+        'attribute' => 'name',
+        'header' => '订单类型',
+        'headerOptions' => ['width' => '180'],
+        'format' => 'raw',
+        'value' => function(){
+            return \yii\helpers\Html::tag('span','售后订单',['class'=>'label label-bg-blue label-tag']);
+        }
+    ],
+];
+
+$columns1 = [
+    [
+        'class' => 'yii\grid\CheckboxColumn',
+        'headerOptions' => ['width' => '30'],
+        'name' => 'id',
+        'checkboxOptions' => function ($model, $key, $index, $column) {
+            return ['value' => $model->id];
+        },
+    ],
+    [
+        'attribute' => 'id',
+        'header'=>'用户编1号',
+        'format' => 'raw',
+        'headerOptions' => ['width' => '100'],
+        'value' => function($model){
+            return $model->id;
+        },
+        'filter' => \kartik\select2\Select2::widget([
+            'model' => $searchModel,
+            'attribute' =>'id',
+            'data' => [''=>'无',1=>1,2=>2,3=>3]
+        ])
+    ],
+    [
+        'attribute' => 'name',
+        'header' => '名称',
+        'headerOptions' => ['width' => '150'],
+        'value' => function($model){
+            return $model->name;
+        }
+    ]
+];
+
+?>
+<?=\anlewo\tabgridview\TabGridViewWidget::widget([
+    'tabArray' => [
+        [
+            'title'=>'自定义标题1',
+            'columns' => $columns,
+            'searchClass' => 'admin\Modules\Index\models\SearchOrder'
+        ],
+        [
+            'title'=>'自定义标题2',
+            'columns' => $columns1,
+            'searchClass' => 'admin\Modules\Index\models\SearchOrder1'
+        ],
+    ]
+]);?>
+

@@ -3,37 +3,19 @@ namespace admin\Modules\Index\Controllers;
 
 use admin\controllers\BaseController;
 use admin\Modules\Index\models\SearchOrder;
-use admin\Modules\Index\models\createForm;
 use yii\web\Response;
+use Service\Index\Index as IndexService;
 use Yii;
-use yii\web\Session;
 
 class IndexController extends BaseController
 {
     public function actionDesktop()
     {
-        $_SESSION['AA'] = 9999;
         $searchModel = new SearchOrder();
-        $searchModel1= new createForm();
         $searchModel->load(\Yii::$app->request->get());
         $dataProvider = $searchModel->search();
-        $count = [1,2,3,4,5,6,7,8];$stateList = [1,2,3,4,5,6,7,8];
-
         return $this->render('desktop',[
-          'searchModel'=>$searchModel,'dataProvider' => $dataProvider,
-            'searchModel1'=>$searchModel1,
-            'count'=>$count,'stateList'=>$stateList
-        ]);
-    }
-
-    public function actionList()
-    {
-        $searchModel = new SearchOrder();
-        $searchModel->load(\Yii::$app->request->get());
-        $dataProvider = $searchModel->search();
-        return $this->renderAjax('list',[
-            'searchModel'=>$searchModel,
-            'dataProvider' => $dataProvider,
+          'searchModel'=>$searchModel,'dataProvider' => $dataProvider
         ]);
     }
 
@@ -41,16 +23,25 @@ class IndexController extends BaseController
     {
         $searchModel = new SearchOrder();
         $dataProvider = $searchModel->search();
-        return $this->renderAjax('template/list-sub',['searchModel'=>$searchModel,'dataProvider' => $dataProvider]);
+        return $this->renderAjax('template/list-sub',[
+            'searchModel'=>$searchModel,
+            'dataProvider' => $dataProvider
+        ]);
     }
 
     public function actionEditName()
-    { 
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        $data = Yii::$app->request->post();
-        $attribute = Yii::$app->request->post('editableAttribute', '');
-
-        var_dump($attribute);
+    {
+        \Yii::$app->response->format = Response::FORMAT_JSON;
+        $data = \Yii::$app->request->post();
+        $attribute = $data['editableAttribute'];
+        $index = $data['editableIndex'];
+        $value = $data['SearchOrder'][$index][$attribute];
+        $params = [
+            'key' => $attribute,
+            'value' => $value,
+        ];
+        $condition['id'] = $data['editableKey'];
+        IndexService::tabList()->editColumns($condition,$params);
         return ['success'=>true,'result' => 1];
     }
 
